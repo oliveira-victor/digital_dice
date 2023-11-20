@@ -28,6 +28,7 @@ export const SocialMediaIcons = styled.ul`
 
     @media (max-width: 767px) {
         justify-content: space-between;
+        margin: 0 auto;
     }
 
     & li {
@@ -43,8 +44,8 @@ export const SocialMediaIcons = styled.ul`
         cursor: pointer;
 
         @media (max-width: 767px) {
-        margin-right: 0;
-    }
+            margin-right: 0;
+        }
 
         &:hover {
                 transform: translateY(-6px);
@@ -57,12 +58,19 @@ export const SocialMediaIcons = styled.ul`
 `
 
 export const SubscribeForm = styled.form`
+    width: 70%;
     margin: 24px 0;
+    display: grid;
+    grid-template-columns: 70% auto;
+
+    @media (max-width: 767px) {
+        width: 100%;
+            display: block;
+        }
 
 `
 
 export const SubscribeInput = styled.input`
-    width: 520px;
     height: 66px;
     border: none;
     border-radius: 10px;
