@@ -1,3 +1,4 @@
+import PhoneMenu from "./components/PhoneMenu"
 import Header from "./containers/Header"
 import Hero from "./containers/Hero"
 import Highlights from "./containers/Highlights"
@@ -14,6 +15,7 @@ function App() {
         <Headroom>
           <Header />
         </Headroom>
+        {/* <PhoneMenu /> */}
         <Hero />
         <ContentWrapper>
           <InitialBanner />

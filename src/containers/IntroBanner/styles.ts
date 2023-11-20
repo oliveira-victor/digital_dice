@@ -2,16 +2,29 @@ import styled from "styled-components";
 import variables from "../../styles/variables";
 
 export const IntroBanner = styled.section`
-    width: 98%;
     margin: 0 auto;
     position: relative;
     height: 768px;
     transform: translateY(-160px);
 
+    @media (max-width: 767px) {
+            height: auto;
+            transform: translateY(-90px);
+        }
+
     & img {
         height: 100%;
         position: absolute;
         z-index: 2;
+
+        @media (max-width: 767px) {
+            width: 50%;
+            height: fit-content;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            transform: translateY(50px);
+        }
     }
 `
 
@@ -26,4 +39,19 @@ export const BannerMsg = styled.div`
     bottom: 0;
     display: grid;
     grid-template-columns: 360px auto;
+
+    @media (max-width: 767px) {
+            padding: 40px 50px;
+            padding-top: 100px;
+            font-size: 7vw;
+            text-align: center;
+            position: relative;
+            display: block;
+            border-radius: 30px 80px 30px 80px;
+            transform: translateY(-50px);
+
+            & div {
+                display: none;
+            }
+        }
 `

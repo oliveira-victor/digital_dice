@@ -3,14 +3,20 @@ import variables from "../../styles/variables";
 
 export const Header = styled.header`
     background-color: #fff;
+    height: 84px;
     padding: 14px 30px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 `
 
 export const Title = styled.img`
     width: 220px;
+
+    @media (max-width: 767px) {
+        width: 140px;
+    }
 `
 
 export const Menu = styled.menu`
@@ -20,6 +26,10 @@ export const Menu = styled.menu`
 
 export const MenuList = styled.ul`
     display: flex;
+
+    @media (max-width: 767px) {
+        display: none;
+    }
 `
 
 export const MenuOption = styled.li`
