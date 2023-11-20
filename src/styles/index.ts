@@ -9,13 +9,17 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Federo', sans-serif;
         list-style: none;
     }
+
+    h2 {
+        font-size: 60px;
+        font-weight: 400;
+    }
 `
 
 export const Container = styled.div`
     max-width: 1920px;
     margin: 0 auto;
     background-color: ${variables.lightThemeBg};
-    min-height: 100vh;
 `
 
 export const ContentWrapper = styled.div`
