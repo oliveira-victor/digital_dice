@@ -1,4 +1,5 @@
 import PhoneMenu from "./components/PhoneMenu"
+import Footer from "./containers/Footer"
 import Header from "./containers/Header"
 import Hero from "./containers/Hero"
 import Highlights from "./containers/Highlights"
@@ -21,6 +22,7 @@ function App() {
           <InitialBanner />
           <Highlights />
         </ContentWrapper>
+        <Footer />
       </Container>
     </>
   )

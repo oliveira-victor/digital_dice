@@ -18,9 +18,6 @@ const Header = () => {
                         The company
                     </S.MenuOption>
                     <S.MenuOption>
-                        Newsletter
-                    </S.MenuOption>
-                    <S.MenuOption>
                         Login
                     </S.MenuOption>
                 </S.MenuList>
