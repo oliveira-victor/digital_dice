@@ -7,9 +7,6 @@ export const Header = styled.header`
     display: flex;
     justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    position: fixed;
-    width: 100%;
-    z-index: 10;
 `
 
 export const Title = styled.img`
