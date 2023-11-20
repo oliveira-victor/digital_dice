@@ -22,10 +22,10 @@ const Footer = () => {
                         </li>
                     </S.SocialMediaIcons>
                     <p>Subscribe to our newsletter and learn about our fresh releases and discounts before anyone else!</p>
-                    <form>
+                    <S.SubscribeForm>
                         <S.SubscribeInput type="text" placeholder='Your email here' />
                         <S.SubscribeBtn type='button'>Subscribe</S.SubscribeBtn>
-                    </form>
+                    </S.SubscribeForm>
                     <p>
                         Digital Dice and all its games are fictional and created by Victor Freire Oliveira - front-end developer, for portfolio
                         project purpose, using React JS, Redux, Styled-Components and TypeScript as main techs. All the design was also
