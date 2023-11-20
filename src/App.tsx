@@ -1,6 +1,7 @@
 import Header from "./containers/Header"
 import Hero from "./containers/Hero"
-import GlobalStyle, { Container } from "./styles"
+import InitialBanner from "./containers/IntroBanner"
+import GlobalStyle, { Container, ContentWrapper } from "./styles"
 
 function App() {
 
@@ -10,6 +11,9 @@ function App() {
       <Container>
         <Header />
         <Hero />
+        <ContentWrapper>
+          <InitialBanner />
+        </ContentWrapper>
       </Container>
     </>
   )

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import heroImg from '../../assets/hero.webp'
 
-export const HeroImg = styled.div`
+export const HeroImg = styled.section`
     background-image: url(${heroImg});
     background-size: cover;
     background-color: red;

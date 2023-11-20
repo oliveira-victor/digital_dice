@@ -18,4 +18,9 @@ export const Container = styled.div`
     min-height: 100vh;
 `
 
+export const ContentWrapper = styled.div`
+    max-width: 1440px;
+    margin: 0 auto;
+`
+
 export default GlobalStyle
