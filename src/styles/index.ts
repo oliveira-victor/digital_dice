@@ -35,4 +35,11 @@ export const ContentWrapper = styled.div`
     position: relative;
 `
 
+export const CardsContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+`
+
 export default GlobalStyle
