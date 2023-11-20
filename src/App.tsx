@@ -1,4 +1,5 @@
 import Header from "./containers/Header"
+import Hero from "./containers/Hero"
 import GlobalStyle, { Container } from "./styles"
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <GlobalStyle />
       <Container>
         <Header />
+        <Hero />
       </Container>
     </>
   )

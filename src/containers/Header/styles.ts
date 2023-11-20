@@ -2,11 +2,13 @@ import styled from "styled-components";
 import variables from "../../styles/variables";
 
 export const Header = styled.header`
-background-color: #fff;
+    background-color: #fff;
     padding: 14px 30px;
     display: flex;
     justify-content: space-between;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: fixed;
+    width: 100%;
 `
 
 export const Title = styled.img`
