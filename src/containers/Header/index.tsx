@@ -17,6 +17,12 @@ const Header = () => {
                     <S.MenuOption>
                         The company
                     </S.MenuOption>
+                    <S.MenuOption>
+                        Newsletter
+                    </S.MenuOption>
+                    <S.MenuOption>
+                        Login
+                    </S.MenuOption>
                 </S.MenuList>
                 <S.CartIcon>
                     <img src={cart} alt="Shopping cart icon" />
