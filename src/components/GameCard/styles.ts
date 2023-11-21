@@ -8,7 +8,7 @@ const FadeIn = keyframes`
 
 export const GameCard = styled.div`
     background-color: ${(props) => props.theme.mainColor};
-    width: 320px;
+    width: 350px;
     border-radius: 16px;
     padding: 10px;
     padding-bottom: 18px;
