@@ -1,5 +1,11 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import variables from "../../styles/variables";
+
+const bounce = keyframes`
+    0%, 20%, 50%, 80%, 100% {transform: translate(8px, -8px);}
+    40% {transform: translate(8px, -14px);}
+    60% {transform: translate(8px, -12px);}
+`
 
 export const Header = styled.header`
     background-color: ${(props) => props.theme.headerColor};
@@ -65,6 +71,7 @@ export const CartNotification = styled.div`
     border-radius: 50%;
     text-align: center;
     transform: translate(8px, -8px);
+    animation: ${bounce} 2s infinite;
 `
 
 export const themeIcon = styled.img`
