@@ -3,7 +3,7 @@ import Headroom from 'react-headroom'
 import { ThemeProvider } from "styled-components"
 import { useState } from "react"
 
-import PhoneMenu from "./components/PhoneMenu"
+/* import PhoneMenu from "./components/PhoneMenu" */
 import Footer from "./containers/Footer"
 import GamesSection from "./containers/GamesSection"
 import Header from "./containers/Header"
@@ -17,12 +17,16 @@ function App() {
 
   const [themeIsDark, setThemeIsDark] = useState(false)
 
+  const switchTheme = () => {
+    setThemeIsDark(!themeIsDark)
+  }
+
   return (
-    <ThemeProvider theme={lightTheme}>
+    <ThemeProvider theme={themeIsDark ? darkTheme : lightTheme}>
       <GlobalStyle />
       <Container>
         <Headroom>
-          <Header />
+          <Header switchTheme={switchTheme} themeIsDark={themeIsDark} />
         </Headroom>
         {/* <PhoneMenu /> */}
         <Hero />

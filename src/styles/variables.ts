@@ -1,5 +1,5 @@
 export default {
-    mainColor: '#8000FF',
+    mainColor: '#8744b8',
     secondColor: '#3E60D6',
     lightGrayBtn: '#BABABA',
     darkGrayBtn: '#1F1F1F',
