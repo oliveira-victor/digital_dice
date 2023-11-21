@@ -38,7 +38,7 @@ export const ContentWrapper = styled.div`
 export const CardsContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 50px;
     justify-content: center;
     margin-bottom: 100px;
 `

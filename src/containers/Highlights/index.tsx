@@ -9,7 +9,6 @@ const Highlights = () => {
                 <GameCard />
                 <GameCard />
                 <GameCard />
-                <GameCard />
             </CardsContainer>
         </section>
     )
