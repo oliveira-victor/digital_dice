@@ -65,3 +65,13 @@ export const CartNotification = styled.div`
     text-align: center;
     transform: translate(8px, -8px);
 `
+
+export const themeIcon = styled.img`
+    width: 24px;
+    margin: 0 20px;
+    transition: all .5s ease;
+
+    &:hover {
+        transform: rotate(-20deg);
+    }
+`

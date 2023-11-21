@@ -40,6 +40,13 @@ export const CardsContainer = styled.div`
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    margin-bottom: 100px;
+`
+
+export const SectionTitle = styled.h2`
+    color: ${variables.mainColor};
+    border-bottom: 2px solid ${variables.mainColor};
+    margin-bottom: 80px;
 `
 
 export default GlobalStyle

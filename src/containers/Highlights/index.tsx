@@ -1,11 +1,10 @@
 import GameCard from '../../components/GameCard'
-import { CardsContainer } from '../../styles'
-import * as S from './styles'
+import { CardsContainer, SectionTitle } from '../../styles'
 
 const Highlights = () => {
     return (
         <section>
-            <S.HighlightsTitle>Highlights</S.HighlightsTitle>
+            <SectionTitle>Highlights</SectionTitle>
             <CardsContainer>
                 <GameCard />
                 <GameCard />

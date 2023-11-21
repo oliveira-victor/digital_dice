@@ -1,5 +1,6 @@
 import PhoneMenu from "./components/PhoneMenu"
 import Footer from "./containers/Footer"
+import GamesSection from "./containers/GamesSection"
 import Header from "./containers/Header"
 import Hero from "./containers/Hero"
 import Highlights from "./containers/Highlights"
@@ -21,6 +22,7 @@ function App() {
         <ContentWrapper>
           <InitialBanner />
           <Highlights />
+          <GamesSection />
         </ContentWrapper>
         <Footer />
       </Container>

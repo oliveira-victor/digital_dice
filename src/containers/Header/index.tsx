@@ -2,6 +2,8 @@ import digitalDiceA from '../../assets/digitalDice_a.svg'
 import * as S from './styles'
 
 import cart from '../../assets/cart.svg'
+import moonIcon from '../../assets/moon-icon.svg'
+import sunIcon from '../../assets/sun-icon.svg'
 
 const Header = () => {
     return (
@@ -25,6 +27,7 @@ const Header = () => {
                     <img src={cart} alt="Shopping cart icon" />
                     <S.CartNotification>2</S.CartNotification>
                 </S.CartIcon>
+                <S.themeIcon src={moonIcon} alt="Dark theme moon icon" />
             </S.Menu>
         </S.Header>
     )
