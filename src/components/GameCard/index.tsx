@@ -3,7 +3,7 @@ import * as S from './styles'
 const GameCard = () => {
     return (
         <S.GameCard>
-            <S.CardImage src="https://via.placeholder.com/400x400" alt="Game thumbnail" />
+            <S.CardImage src="https://vfostudio.vercel.app/dist/images/portfolio/a14+.jpg" alt="Game thumbnail" />
             <S.GameTitle>Game Name</S.GameTitle>
             <S.GenreList>
                 <S.GenreButton>Race</S.GenreButton>

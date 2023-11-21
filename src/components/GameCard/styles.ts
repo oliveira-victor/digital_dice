@@ -7,7 +7,7 @@ const FadeIn = keyframes`
 `
 
 export const GameCard = styled.div`
-    background-color: #fff;
+    background-color: ${(props) => props.theme.mainColor};
     width: 320px;
     border-radius: 16px;
     padding: 10px;
@@ -28,6 +28,7 @@ export const CardImage = styled.img`
 `
 
 export const GameTitle = styled.h3`
+    color: ${(props) => props.theme.cardTxtColor};
     font-size: 30px;
     font-weight: 400;
     text-align: center;
@@ -40,8 +41,8 @@ export const GenreList = styled.div`
 `
 
 export const GenreButton = styled.button`
-    background-color: ${variables.lightGrayBtn};
-    color: #fff;
+    background-color: ${(props) => props.theme.genreBtn};
+    color: ${(props) => props.theme.genreTxt};
     padding: 2px 24px;
     margin: 0 5px;
     border: none;
@@ -79,6 +80,7 @@ export const GameBuyRow = styled(GameInfoRow)`
 `
 
 export const GamePrice = styled.div`
+    color: ${(props) => props.theme.cardTxtColor};
     font-size: 36px;
 `
 

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import variables from "../../styles/variables";
 
 export const Header = styled.header`
-    background-color: #fff;
+    background-color: ${(props) => props.theme.headerColor};
     height: 84px;
     padding: 14px 30px;
     display: flex;
@@ -46,6 +46,7 @@ export const MenuOption = styled.li`
 export const CartIcon = styled.div`
     margin: 0 20px;
     position: relative;
+    cursor: pointer;
 
     & img {
         height: 26px;
@@ -69,6 +70,7 @@ export const CartNotification = styled.div`
 export const themeIcon = styled.img`
     width: 24px;
     margin: 0 20px;
+    cursor: pointer;
     transition: all .5s ease;
 
     &:hover {
