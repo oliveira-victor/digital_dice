@@ -1,9 +1,13 @@
+import { useSelector } from 'react-redux'
+
+import { RootReducer } from '../../store'
+
 import * as S from './styles'
 
 import digitalDiceA from '../../assets/digitalDice_a.svg'
 import digitalDiceB from '../../assets/digitalDice_b.svg'
 import lightThemeCart from '../../assets/cart.svg'
-import darkThemeCart from '../../assets/cart-white.svg' 
+import darkThemeCart from '../../assets/cart-white.svg'
 import moonIcon from '../../assets/moon-icon.svg'
 import sunIcon from '../../assets/sun-icon.svg'
 
@@ -13,6 +17,8 @@ type Props = {
 }
 
 const Header = (props: Props) => {
+
+    const items = useSelector((state: RootReducer) => state.cart.items)
 
     return (
         <S.Header>
@@ -33,7 +39,9 @@ const Header = (props: Props) => {
                 </S.MenuList>
                 <S.CartIcon>
                     <img src={props.themeIsDark ? darkThemeCart : lightThemeCart} alt="Shopping cart icon" />
-                    <S.CartNotification>2</S.CartNotification>
+                    {items.length ?
+                        <S.CartNotification>{items.length}</S.CartNotification>
+                        : ''}
                 </S.CartIcon>
                 <S.themeIcon src={props.themeIsDark ? sunIcon : moonIcon} alt="Dark theme moon icon" onClick={props.switchTheme} />
             </S.Menu>

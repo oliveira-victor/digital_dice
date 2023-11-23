@@ -1,21 +1,35 @@
+import { useDispatch } from 'react-redux'
+import { Game } from '../../App'
+import { add } from '../../store/reducers/cart'
+
 import * as S from './styles'
 
-const GameCard = () => {
+type Props = {
+    game: Game
+}
+
+const GameCard = ({ game }: Props) => {
+    const dispatch = useDispatch()
+
     return (
         <S.GameCard>
-            <S.CardImage src="https://vfostudio.vercel.app/dist/images/portfolio/a14+.jpg" alt="Game thumbnail" />
-            <S.GameTitle>Game Name</S.GameTitle>
+            <S.CardImage src={game.thumbnail} alt={game.title} />
+            <S.GameTitle>{game.title}</S.GameTitle>
             <S.GenreList>
-                <S.GenreButton>Race</S.GenreButton>
-                <S.GenreButton>RPG</S.GenreButton>
+                {game.genre.map((gen) => (
+                    <S.GenreButton key={gen}>{game.genre}</S.GenreButton>
+                ))}
             </S.GenreList>
             <S.GameInfoRow>
-                <S.PreviousPrice>$: 15.0</S.PreviousPrice>
+                {game.previousPrice ?
+                    <S.PreviousPrice>$: {game.previousPrice}</S.PreviousPrice>
+                    : <span></span>
+                }
                 <S.MoreInfoBtn>More info</S.MoreInfoBtn>
             </S.GameInfoRow>
             <S.GameBuyRow>
-                <S.GamePrice>$: 10.0</S.GamePrice>
-                <S.BuyBtn>Add to cart</S.BuyBtn>
+                <S.GamePrice>$: {game.currentPrince}</S.GamePrice>
+                <S.BuyBtn onClick={() => dispatch(add(game))} type='button'>Add to cart</S.BuyBtn>
             </S.GameBuyRow>
         </S.GameCard>
     )

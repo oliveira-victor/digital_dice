@@ -1,0 +1,112 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "title": "The Jungle Quest",
+            "previousPrice": 23.0,
+            "currentPrince": 15.0,
+            "genre": ["Adventure"],
+            "thumbnail": "https://raw.githubusercontent.com/oliveira-victor/servidor_estaticos/main/digital-dice_server/images/the-jungle-quest.webp",
+            "highlight": false
+        },
+        {
+            "id": 2,
+            "title": "Animals Race",
+            "previousPrice": 15.0,
+            "currentPrince": 10.0,
+            "genre": ["Race"],
+            "thumbnail": "https://raw.githubusercontent.com/oliveira-victor/servidor_estaticos/main/digital-dice_server/images/animals-race.webp",
+            "highlight": true
+        },
+        {
+            "id": 3,
+            "title": "Dancing Robot",
+            "previousPrice": null,
+            "currentPrince": 7.0,
+            "genre": ["Puzzle"],
+            "thumbnail": "https://raw.githubusercontent.com/oliveira-victor/servidor_estaticos/main/digital-dice_server/images/dancing-robot.webp",
+            "highlight": false
+        },
+        {
+            "id": 4,
+            "title": "Taming Snakes",
+            "previousPrice": 17.0,
+            "currentPrince": 12.0,
+            "genre": ["Strategy"],
+            "thumbnail": "https://raw.githubusercontent.com/oliveira-victor/servidor_estaticos/main/digital-dice_server/images/taming-snakes.webp",
+            "highlight": true
+        },
+        {
+            "id": 5,
+            "title": "Detective Capybara",
+            "previousPrice": null,
+            "currentPrince": 7.0,
+            "genre": ["Puzzle"],
+            "thumbnail": "https://raw.githubusercontent.com/oliveira-victor/servidor_estaticos/main/digital-dice_server/images/detective-capybara.webp",
+            "highlight": true
+        },
+        {
+            "id": 6,
+            "title": "First Round Boxe",
+            "previousPrice": null,
+            "currentPrince": 12.0,
+            "genre": ["Sport"],
+            "thumbnail": "https://raw.githubusercontent.com/oliveira-victor/servidor_estaticos/main/digital-dice_server/images/first-round-boxe.webp",
+            "highlight": false
+        },
+        {
+            "id": 7,
+            "title": "Snowboard Penguins",
+            "previousPrice": 10.0,
+            "currentPrince": 8.0,
+            "genre": ["Sport"],
+            "thumbnail": "https://raw.githubusercontent.com/oliveira-victor/servidor_estaticos/main/digital-dice_server/images/snowboard-penguins.webp",
+            "highlight": false
+        },
+        {
+            "id": 8,
+            "title": "Alien Tennis",
+            "previousPrice": null,
+            "currentPrince": 5.0,
+            "genre": ["Sport"],
+            "thumbnail": "https://raw.githubusercontent.com/oliveira-victor/servidor_estaticos/main/digital-dice_server/images/alien-tennis.webp",
+            "highlight": false
+        },
+        {
+            "id": 9,
+            "title": "Wrecked Justice",
+            "previousPrice": null,
+            "currentPrince": 12.0,
+            "genre": ["RPG"],
+            "thumbnail": "https://raw.githubusercontent.com/oliveira-victor/servidor_estaticos/main/digital-dice_server/images/wrecked-justice.webp",
+            "highlight": false
+        },
+        {
+            "id": 10,
+            "title": "Bomber Ninja",
+            "previousPrice": 12.0,
+            "currentPrince": 10.0,
+            "genre": ["RPG", "Strategy"],
+            "thumbnail": "https://raw.githubusercontent.com/oliveira-victor/servidor_estaticos/main/digital-dice_server/images/bomber-ninja.webp",
+            "highlight": false
+        },
+        {
+            "id": 11,
+            "title": "Brave Bear",
+            "previousPrice": 18.0,
+            "currentPrince": 13.0,
+            "genre": ["Adventure"],
+            "thumbnail": "https://raw.githubusercontent.com/oliveira-victor/servidor_estaticos/main/digital-dice_server/images/brave-bear.webp",
+            "highlight": false
+        },
+        {
+            "id": 12,
+            "title": "Casting Spells",
+            "previousPrice": null,
+            "currentPrince": 9.0,
+            "genre": ["RPG"],
+            "thumbnail": "https://raw.githubusercontent.com/oliveira-victor/servidor_estaticos/main/digital-dice_server/images/casting-spells.webp",
+            "highlight": false
+        }
+    ]
+}
