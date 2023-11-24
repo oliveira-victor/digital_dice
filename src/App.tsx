@@ -28,11 +28,6 @@ export type Game = {
 
 function App() {
 
-/*   const [games, setGames] = useState<Game[]>([]) */
-
-  /* 'http://localhost:4000/products' */
-/*   https://github.com/oliveira-victor/servidor_estaticos/blob/main/digital-dice_server/db.json */
-
   const [themeIsDark, setThemeIsDark] = useState(false)
 
   const switchTheme = () => {

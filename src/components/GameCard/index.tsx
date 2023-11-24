@@ -1,6 +1,8 @@
 import { useDispatch } from 'react-redux'
 import { Game } from '../../App'
 import { add } from '../../store/reducers/cart'
+import { revealMsg } from '../../store/reducers/reveal'
+import { useState } from 'react'
 
 import * as S from './styles'
 
@@ -10,6 +12,20 @@ type Props = {
 
 const GameCard = ({ game }: Props) => {
     const dispatch = useDispatch()
+
+    const [itemAdded, setItemAdded] = useState(false)
+
+    function handleCartAction() {
+        dispatch(add(game))
+        setItemAdded(!itemAdded)
+        
+        if (itemAdded === false) {
+            setTimeout(() => {
+                dispatch(revealMsg())
+            }, 4000);
+            dispatch(revealMsg())
+        }
+    }
 
     return (
         <S.GameCard>
@@ -29,7 +45,12 @@ const GameCard = ({ game }: Props) => {
             </S.GameInfoRow>
             <S.GameBuyRow>
                 <S.GamePrice>$: {game.currentPrince}</S.GamePrice>
-                <S.BuyBtn onClick={() => dispatch(add(game))} type='button'>Add to cart</S.BuyBtn>
+                {itemAdded ?
+                    <S.removeItemBtn onClick={handleCartAction} type='button'>Remove</S.removeItemBtn>
+                    :
+                    <S.BuyBtn onClick={handleCartAction} type='button'>Add to cart</S.BuyBtn>
+                }
+
             </S.GameBuyRow>
         </S.GameCard>
     )

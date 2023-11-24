@@ -23,7 +23,7 @@
             "title": "Dancing Robot",
             "previousPrice": null,
             "currentPrince": 7.0,
-            "genre": ["Puzzle"],
+            "genre": ["Music rhythm"],
             "thumbnail": "https://raw.githubusercontent.com/oliveira-victor/servidor_estaticos/main/digital-dice_server/images/dancing-robot.webp",
             "highlight": false
         },

@@ -2,9 +2,8 @@ export default {
     mainColor: '#8744b8',
     secondColor: '#3E60D6',
     lightGrayBtn: '#BABABA',
-    darkGrayBtn: '#1F1F1F',
-    darkThemeCardBg: '#393939',
-    darkThemeGrayTxt: '#A6A6A6',
-    lightThemeBg: '#F0F0F0',
-    darkThemeBg: '#242424'
+    addBtnHover: '#9c4ad9',
+    infoBtnHover: '#5377f5',
+    removeBtn: '#bf3c28',
+    removeBtnHover: '#d63820'
 }

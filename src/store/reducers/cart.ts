@@ -18,7 +18,10 @@ const cartSlice = createSlice({
             const game = action.payload
 
             if (state.items.find((product) => product.id === game.id)) {
-                alert('This item has already been added to cart.')
+                const nextCartItems = state.items.filter(
+                    cartItem => cartItem.id !== action.payload.id
+                )
+                state.items = nextCartItems
             } else {
                 state.items.push(game)
             }

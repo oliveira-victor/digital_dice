@@ -67,7 +67,6 @@ export const SubscribeForm = styled.form`
         width: 100%;
             display: block;
         }
-
 `
 
 export const SubscribeInput = styled.input`
@@ -96,6 +95,10 @@ export const SubscribeBtn = styled.button`
     margin-left: 10px;
     height: 66px;
     cursor: pointer;
+
+    &:hover {
+        background-color: ${variables.infoBtnHover};
+    }
 
     @media (max-width: 767px) {
         width: 100%;

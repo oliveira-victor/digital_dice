@@ -38,12 +38,12 @@ const Header = (props: Props) => {
                     </S.MenuOption>
                 </S.MenuList>
                 <S.CartIcon>
-                    <img src={props.themeIsDark ? darkThemeCart : lightThemeCart} alt="Shopping cart icon" />
+                    <img src={props.themeIsDark ? darkThemeCart : lightThemeCart} alt="Shopping cart icon" title={`Cart: ${items.length} items`} />
                     {items.length ?
                         <S.CartNotification>{items.length}</S.CartNotification>
                         : ''}
                 </S.CartIcon>
-                <S.themeIcon src={props.themeIsDark ? sunIcon : moonIcon} alt="Dark theme moon icon" onClick={props.switchTheme} />
+                <S.themeIcon src={props.themeIsDark ? sunIcon : moonIcon} alt="Dark theme moon icon" onClick={props.switchTheme} title="Change theme" />
             </S.Menu>
         </S.Header>
     )

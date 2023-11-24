@@ -73,6 +73,10 @@ export const MoreInfoBtn = styled.button`
     border: none;
     border-radius: 6px;
     cursor: pointer;
+
+    &:hover {
+        background-color: ${variables.infoBtnHover};
+    }
 `
 
 export const GameBuyRow = styled(GameInfoRow)`
@@ -88,4 +92,16 @@ export const BuyBtn = styled(MoreInfoBtn)`
     padding: 14px 16px;
     background-color: ${variables.mainColor};
     font-size: 20px;
+
+    &:hover {
+        background-color: ${variables.addBtnHover};
+    }
+`
+
+export const removeItemBtn = styled(BuyBtn)`
+    background-color: ${variables.removeBtn};
+
+    &:hover {
+        background-color: ${variables.removeBtnHover};
+    }
 `

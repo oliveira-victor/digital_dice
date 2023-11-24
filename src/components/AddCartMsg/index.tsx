@@ -1,12 +1,22 @@
 import * as S from './styles'
 
+import { RootReducer } from '../../store'
+
 import tick from '../../assets/tick.svg'
+import { useSelector } from 'react-redux'
 
 const AddCartMsg = () => {
+
+    const revealState = useSelector((state: RootReducer) => state.reveal.reveal)
+
     return (
-        <S.CartActionBox>
-            <img src={tick} alt="Tick icon" />The item has been added to cart!
-        </S.CartActionBox>
+        <>
+            {revealState ? 
+                <S.CartActionBox>
+                    <img src={tick} alt="Tick icon" />The item has been added to the cart!
+                </S.CartActionBox> 
+            : ''}
+        </>
     )
 }
 
