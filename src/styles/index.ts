@@ -22,6 +22,12 @@ const GlobalStyle = createGlobalStyle`
     }
 `
 
+export const Paragraph = styled.p`
+    font-size: 20px;
+    line-height: 1.6;
+    color: ${(props) => props.theme.paragraphColor};
+`
+
 export const Container = styled.div`
     max-width: 1920px;
     margin: 0 auto;
