@@ -3,7 +3,7 @@ import { Game } from '../App'
 
 const api = createApi({
     baseQuery: fetchBaseQuery({
-        baseUrl: 'http://localhost:4000'
+        baseUrl: 'https://digital-dice-data.onrender.com/'
     }),
     endpoints: builder => ({
         getGames: builder.query<Game[], void>({

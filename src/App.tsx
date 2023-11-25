@@ -47,7 +47,7 @@ function App() {
           <ContentWrapper>
             <AddCartMsg />
             <InitialBanner />
-            <Highlights />
+            {/* <Highlights /> */}
             <GamesSection />
           </ContentWrapper>
           <Footer />
