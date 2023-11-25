@@ -15,18 +15,6 @@ const GamesSection = () => {
                 {games?.map((game) => (
                     <GameCard key={game.id} game={game} />
                 ))}
-                {/* <GameCard />
-                <GameCard />
-                <GameCard />
-                <GameCard />
-                <GameCard />
-                <GameCard />
-                <GameCard />
-                <GameCard />
-                <GameCard />
-                <GameCard />
-                <GameCard />
-                <GameCard /> */}
             </CardsContainer>
         </section>
     )
