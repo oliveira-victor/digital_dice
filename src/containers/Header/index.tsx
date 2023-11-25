@@ -10,6 +10,7 @@ import lightThemeCart from '../../assets/cart.svg'
 import darkThemeCart from '../../assets/cart-white.svg'
 import moonIcon from '../../assets/moon-icon.svg'
 import sunIcon from '../../assets/sun-icon.svg'
+import { NavLink } from 'react-router-dom'
 
 type Props = {
     switchTheme: () => void
@@ -27,22 +28,24 @@ const Header = (props: Props) => {
             </h1>
             <S.Menu>
                 <S.MenuList>
-                    <S.MenuOption>
-                        Games
-                    </S.MenuOption>
-                    <S.MenuOption>
-                        The company
-                    </S.MenuOption>
-                    <S.MenuOption>
-                        Login
-                    </S.MenuOption>
+                    <NavLink to="/">
+                        <S.MenuOption>Games</S.MenuOption>
+                    </NavLink>
+                    <NavLink to="/company">
+                        <S.MenuOption>The company</S.MenuOption>
+                    </NavLink>
+                    <NavLink to="/login">
+                        <S.MenuOption>Login</S.MenuOption>
+                    </NavLink>
                 </S.MenuList>
-                <S.CartIcon>
-                    <img src={props.themeIsDark ? darkThemeCart : lightThemeCart} alt="Shopping cart icon" title={`Cart: ${items.length} items`} />
-                    {items.length ?
-                        <S.CartNotification>{items.length}</S.CartNotification>
-                        : ''}
-                </S.CartIcon>
+                <NavLink to="/cart">
+                    <S.CartIcon>
+                        <img src={props.themeIsDark ? darkThemeCart : lightThemeCart} alt="Shopping cart icon" title={items.length > 1 ? `Cart: ${items.length} items` : `Cart: ${items.length} item`} />
+                        {items.length ?
+                            <S.CartNotification>{items.length}</S.CartNotification>
+                            : ''}
+                    </S.CartIcon>
+                </NavLink>
                 <S.themeIcon src={props.themeIsDark ? sunIcon : moonIcon} alt="Dark theme moon icon" onClick={props.switchTheme} title="Change theme" />
             </S.Menu>
         </S.Header>

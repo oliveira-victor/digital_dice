@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         font-family: 'Federo', sans-serif;
         list-style: none;
+        text-decoration: none;
     }
 
     h2 {

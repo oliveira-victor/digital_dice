@@ -1,20 +1,20 @@
-import GlobalStyle, { Container, ContentWrapper } from "./styles"
-import Headroom from 'react-headroom'
-import { ThemeProvider } from "styled-components"
+import GlobalStyle, { Container } from "./styles"
 import { useState } from "react"
+import { ThemeProvider } from "styled-components"
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Provider } from "react-redux"
+import Headroom from 'react-headroom'
+import { store } from "./store"
 
-/* import PhoneMenu from "./components/PhoneMenu" */
 import Footer from "./containers/Footer"
-import GamesSection from "./containers/GamesSection"
 import Header from "./containers/Header"
-import Hero from "./containers/Hero"
-/* import Highlights from "./containers/Highlights" */
-import InitialBanner from "./containers/IntroBanner"
 import lightTheme from "./themes/light"
 import darkTheme from "./themes/dark"
-import { Provider } from "react-redux"
-import { store } from "./store"
-import AddCartMsg from "./components/AddCartMsg"
+
+import Home from "./pages/Home"
+import Company from "./pages/Company"
+import Login from "./pages/Login"
+import CartPage from "./pages/CartPape"
 
 export type Game = {
   id: number
@@ -38,20 +38,20 @@ function App() {
     <Provider store={store}>
       <ThemeProvider theme={themeIsDark ? darkTheme : lightTheme}>
         <GlobalStyle />
-        <Container>
-          <Headroom>
-            <Header switchTheme={switchTheme} themeIsDark={themeIsDark} />
-          </Headroom>
-          {/* <PhoneMenu /> */}
-          <Hero />
-          <ContentWrapper>
-            <AddCartMsg />
-            <InitialBanner />
-            {/* <Highlights /> */}
-            <GamesSection />
-          </ContentWrapper>
-          <Footer />
-        </Container>
+        <BrowserRouter>
+          <Container>
+            <Headroom>
+              <Header switchTheme={switchTheme} themeIsDark={themeIsDark} />
+            </Headroom>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/company" element={<Company />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/cart" element={<CartPage />} />
+            </Routes>
+            <Footer />
+          </Container>
+        </BrowserRouter>
       </ThemeProvider>
     </Provider>
   )
