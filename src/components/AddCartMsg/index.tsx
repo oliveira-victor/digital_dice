@@ -1,9 +1,9 @@
-import * as S from './styles'
-
+import { useSelector } from 'react-redux'
 import { RootReducer } from '../../store'
 
+import * as S from './styles'
+
 import tick from '../../assets/tick.svg'
-import { useSelector } from 'react-redux'
 
 const AddCartMsg = () => {
 

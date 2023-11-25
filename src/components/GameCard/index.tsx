@@ -32,8 +32,8 @@ const GameCard = ({ game }: Props) => {
             <S.CardImage src={game.thumbnail} alt={game.title} />
             <S.GameTitle>{game.title}</S.GameTitle>
             <S.GenreList>
-                {game.genre.map((gen) => (
-                    <S.GenreButton key={gen}>{game.genre}</S.GenreButton>
+                {game.genre.map((item, index) => (
+                    <S.GenreButton key={index}>{item}</S.GenreButton>
                 ))}
             </S.GenreList>
             <S.GameInfoRow>
