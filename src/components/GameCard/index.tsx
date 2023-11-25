@@ -2,10 +2,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Game } from '../../App'
 import { add } from '../../store/reducers/cart'
 import { revealMsg } from '../../store/reducers/reveal'
-import { useState } from 'react'
+import { RootReducer } from '../../store'
 
 import * as S from './styles'
-import { RootReducer } from '../../store'
 
 type Props = {
     game: Game
@@ -16,13 +15,13 @@ const GameCard = ({ game }: Props) => {
 
     const items = useSelector((state: RootReducer) => state.cart.items)
 
-    const [itemAdded, setItemAdded] = useState(false)
 
     function handleCartAction() {
         dispatch(add(game))
-        setItemAdded(!itemAdded)
         
-        if (itemAdded === false) {
+        if (items.find((product) => product.id === game.id)) {
+            return ''
+        } else {
             setTimeout(() => {
                 dispatch(revealMsg())
             }, 4000);

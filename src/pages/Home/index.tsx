@@ -2,7 +2,7 @@
 import AddCartMsg from "../../components/AddCartMsg"
 import GamesSection from "../../containers/GamesSection"
 import Hero from "../../containers/Hero"
-/* import Highlights from "../../containers/Highlights" */
+import Highlights from "../../containers/Highlights"
 import InitialBanner from "../../containers/IntroBanner"
 import { ContentWrapper } from "../../styles"
 
@@ -14,7 +14,7 @@ const Home = () => {
             <ContentWrapper>
                 <AddCartMsg />
                 <InitialBanner />
-                {/* <Highlights /> */}
+                <Highlights />
                 <GamesSection />
             </ContentWrapper>
         </>

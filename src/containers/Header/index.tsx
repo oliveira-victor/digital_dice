@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
-
 import { RootReducer } from '../../store'
+import { NavLink } from 'react-router-dom'
 
 import * as S from './styles'
 
@@ -10,7 +10,6 @@ import lightThemeCart from '../../assets/cart.svg'
 import darkThemeCart from '../../assets/cart-white.svg'
 import moonIcon from '../../assets/moon-icon.svg'
 import sunIcon from '../../assets/sun-icon.svg'
-import { NavLink } from 'react-router-dom'
 
 type Props = {
     switchTheme: () => void
