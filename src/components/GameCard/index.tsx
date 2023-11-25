@@ -1,10 +1,11 @@
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Game } from '../../App'
 import { add } from '../../store/reducers/cart'
 import { revealMsg } from '../../store/reducers/reveal'
 import { useState } from 'react'
 
 import * as S from './styles'
+import { RootReducer } from '../../store'
 
 type Props = {
     game: Game
@@ -12,6 +13,8 @@ type Props = {
 
 const GameCard = ({ game }: Props) => {
     const dispatch = useDispatch()
+
+    const items = useSelector((state: RootReducer) => state.cart.items)
 
     const [itemAdded, setItemAdded] = useState(false)
 
@@ -24,6 +27,14 @@ const GameCard = ({ game }: Props) => {
                 dispatch(revealMsg())
             }, 4000);
             dispatch(revealMsg())
+        }
+    }
+
+    function renderCartButton() {
+        if (items.find((product) => product.id === game.id)) {
+            return <S.removeItemBtn onClick={handleCartAction} type='button'>Remove</S.removeItemBtn>
+        } else {
+            return <S.BuyBtn onClick={handleCartAction} type='button'>Add to cart</S.BuyBtn>
         }
     }
 
@@ -45,12 +56,7 @@ const GameCard = ({ game }: Props) => {
             </S.GameInfoRow>
             <S.GameBuyRow>
                 <S.GamePrice>$: {game.currentPrince}</S.GamePrice>
-                {itemAdded ?
-                    <S.removeItemBtn onClick={handleCartAction} type='button'>Remove</S.removeItemBtn>
-                    :
-                    <S.BuyBtn onClick={handleCartAction} type='button'>Add to cart</S.BuyBtn>
-                }
-
+                {renderCartButton()}
             </S.GameBuyRow>
         </S.GameCard>
     )
