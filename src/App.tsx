@@ -8,7 +8,7 @@ import Footer from "./containers/Footer"
 import GamesSection from "./containers/GamesSection"
 import Header from "./containers/Header"
 import Hero from "./containers/Hero"
-import Highlights from "./containers/Highlights"
+/* import Highlights from "./containers/Highlights" */
 import InitialBanner from "./containers/IntroBanner"
 import lightTheme from "./themes/light"
 import darkTheme from "./themes/dark"
