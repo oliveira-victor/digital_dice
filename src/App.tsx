@@ -15,6 +15,7 @@ import Home from "./pages/Home"
 import Company from "./pages/Company"
 import Login from "./pages/Login"
 import CartPage from "./pages/CartPape"
+import ScrollToTop from "./components/ScrollToTop"
 
 export type Game = {
   id: number
@@ -39,6 +40,7 @@ function App() {
       <ThemeProvider theme={themeIsDark ? darkTheme : lightTheme}>
         <GlobalStyle />
         <BrowserRouter>
+        <ScrollToTop />
           <Container>
             <Headroom>
               <Header switchTheme={switchTheme} themeIsDark={themeIsDark} />
