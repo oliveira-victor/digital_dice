@@ -16,6 +16,7 @@ import Company from "./pages/Company"
 import Login from "./pages/Login"
 import CartPage from "./pages/CartPape"
 import ScrollToTop from "./components/ScrollToTop"
+import PhoneMenu from "./components/PhoneMenu"
 
 export type Game = {
   id: number
@@ -45,6 +46,7 @@ function App() {
             <Headroom>
               <Header switchTheme={switchTheme} themeIsDark={themeIsDark} />
             </Headroom>
+            <PhoneMenu />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/company" element={<Company />} />
