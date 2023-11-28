@@ -59,6 +59,10 @@ export const CartIcon = styled.div`
     & img {
         height: 26px;
     }
+
+    @media (max-width: 767px) {
+        display: none;
+    }
 `
 export const CartNotification = styled.div`
     background-color: red;

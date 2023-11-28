@@ -22,9 +22,11 @@ const Header = (props: Props) => {
 
     return (
         <S.Header>
-            <h1>
-                <S.Title src={props.themeIsDark ? digitalDiceB : digitalDiceA} alt="Digital Dice logo" />
-            </h1>
+            <NavLink to="/">
+                <h1>
+                    <S.Title src={props.themeIsDark ? digitalDiceB : digitalDiceA} alt="Digital Dice logo" />
+                </h1>
+            </NavLink>
             <S.Menu>
                 <S.MenuList>
                     <NavLink to="/">

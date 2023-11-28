@@ -1,10 +1,16 @@
 import { NavLink } from 'react-router-dom'
+import { RootReducer } from '../../store'
+import { useSelector } from 'react-redux'
 
 import * as S from './styles'
 
 import tempImg from '../../assets/moon-icon.svg'
+import lightThemeCart from '../../assets/cart.svg'
 
 const PhoneMenu = () => {
+
+    const items = useSelector((state: RootReducer) => state.cart.items)
+
     return (
         <S.MenuBar>
             <nav>
@@ -28,10 +34,14 @@ const PhoneMenu = () => {
                         </S.PhoneMenuButton>
                     </NavLink>
                     <NavLink to="/cart">
-                        <S.PhoneMenuButton>
-                            <S.BtnIcon src={tempImg} alt="" />
-                            <span>Cart</span>
-                        </S.PhoneMenuButton>
+                        <S.CartBtnContainer>
+                        <S.CartIcon>
+                        <img src={lightThemeCart} alt="Shopping cart icon" title={items.length > 1 ? `Cart: ${items.length} items` : `Cart: ${items.length} item`} />
+                        {items.length ?
+                            <S.CartNotification>{items.length}</S.CartNotification>
+                            : ''}
+                    </S.CartIcon>
+                        </S.CartBtnContainer>
                     </NavLink>
                 </S.PhoneMenuList>
             </nav>

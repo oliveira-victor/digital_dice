@@ -25,7 +25,7 @@ export const CartActionBox = styled.div`
 
     @media (max-width: 767px) {
         width: 84%;
-        transform: translate(24px, -10px);
+        transform: translate(24px, -80px);
         right: auto;
     }
 

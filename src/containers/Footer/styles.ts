@@ -6,6 +6,10 @@ export const Footer = styled.footer`
     background-color: ${variables.mainColor};
     margin-top: 100px;
     padding: 0 2%;
+
+    @media (max-width: 767px) {
+        padding-bottom: 70px;
+    }
 `
 
 export const FooterContentWrapper = styled(ContentWrapper)`
