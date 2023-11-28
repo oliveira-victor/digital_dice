@@ -35,13 +35,17 @@ export const PhoneMenuButton = styled.li`
 `
 
 export const BtnIcon = styled.img`
-    height: 30px;
+    height: 26px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 2px;
 `
 
 export const CartBtnContainer = styled.li`
     height: 100%;
     display: flex;
     align-items: center;
+    border-left: 1px solid #ccc;
 `
 
 export const CartIcon = styled.div`
