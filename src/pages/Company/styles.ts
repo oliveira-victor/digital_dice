@@ -19,6 +19,12 @@ export const firstWrapper = styled.div`
     & img {
         width: 100%;
     }
+
+    @media (max-width: 1023px) {
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+    }
 `
 
 export const secondWrapper = styled(firstWrapper)`
