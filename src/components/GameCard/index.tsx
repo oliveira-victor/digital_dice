@@ -3,6 +3,7 @@ import { Game } from '../../App'
 import { add } from '../../store/reducers/cart'
 import { revealMsg } from '../../store/reducers/reveal'
 import { RootReducer } from '../../store'
+import { useState } from 'react'
 
 import * as S from './styles'
 
@@ -15,10 +16,11 @@ const GameCard = ({ game }: Props) => {
 
     const items = useSelector((state: RootReducer) => state.cart.items)
 
+    const [displayGameSummary, setDisplayGameSummary] = useState(false)
 
     function handleCartAction() {
         dispatch(add(game))
-        
+
         if (items.find((product) => product.id === game.id)) {
             return ''
         } else {
@@ -37,21 +39,34 @@ const GameCard = ({ game }: Props) => {
         }
     }
 
+    /* function showGameSummary() {
+
+    } */
+
     return (
         <S.GameCard>
-            <S.CardImage src={game.thumbnail} alt={game.title} />
+            {!displayGameSummary ?
+                <S.CardImage src={game.thumbnail} alt={game.title} />
+                : ''}
             <S.GameTitle>{game.title}</S.GameTitle>
             <S.GenreList>
                 {game.genre.map((item, index) => (
                     <S.GenreButton key={index}>{item}</S.GenreButton>
                 ))}
             </S.GenreList>
+            {displayGameSummary ?
+                <S.GameSummary>
+                    <p>
+                        {game.info}
+                    </p>
+                </S.GameSummary>
+                : ''}
             <S.GameInfoRow>
                 {game.previousPrice ?
                     <S.PreviousPrice>$: {game.previousPrice}</S.PreviousPrice>
                     : <span></span>
                 }
-                <S.MoreInfoBtn>More info</S.MoreInfoBtn>
+                <S.MoreInfoBtn onClick={() => setDisplayGameSummary(!displayGameSummary)}>{displayGameSummary ? 'Hide info' : 'More info'}</S.MoreInfoBtn>
             </S.GameInfoRow>
             <S.GameBuyRow>
                 <S.GamePrice>$: {game.currentPrince}</S.GamePrice>

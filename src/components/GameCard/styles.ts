@@ -25,6 +25,8 @@ export const GameCard = styled.div`
 
 export const CardImage = styled.img`
     width: 100%;
+    animation-name: ${FadeIn};
+    animation-duration: 1s;
 `
 
 export const GameTitle = styled.h3`
@@ -104,4 +106,15 @@ export const removeItemBtn = styled(BuyBtn)`
     &:hover {
         background-color: ${variables.removeBtnHover};
     }
+`
+
+export const GameSummary = styled.div`
+    color: ${(props) => props.theme.cardTxtColor};
+    padding: 0 20px;
+    height: 334px;
+    animation-name: ${FadeIn};
+    animation-duration: 1s;
+    display: flex;
+    align-items: center;
+    line-height: 1.4;
 `

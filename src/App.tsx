@@ -25,6 +25,7 @@ export type Game = {
   currentPrince: number
   genre: string[]
   thumbnail: string
+  info: string
   highlight: boolean
 }
 
