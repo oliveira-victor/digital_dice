@@ -5,5 +5,7 @@ export default {
     addBtnHover: '#9c4ad9',
     infoBtnHover: '#5377f5',
     removeBtn: '#bf3c28',
-    removeBtnHover: '#d63820'
+    removeBtnHover: '#d63820',
+    greenColor: '#26c952',
+    greenColorHover: '#4af076'
 }
