@@ -1,6 +1,7 @@
 import { SectionTitle } from "../../styles"
 import { useSelector } from "react-redux"
 import { RootReducer } from "../../store"
+import CartItem from "../../components/CartItem"
 
 import * as S from './styles'
 
@@ -16,20 +17,13 @@ const CartPage = () => {
             {items.length >= 1 ? (
                 <>
                     <ul>
-                        <S.GameList>
-                            <S.GameThumb src="https://raw.githubusercontent.com/oliveira-victor/servidor_estaticos/main/digital-dice_server/images/the-jungle-quest.webp" alt="" />
-                            <S.GameInfo>
-                                <div>
-                                    <S.GameCartTitle>Game Title</S.GameCartTitle>
-                                    <S.PreviousPriceCart>$ 15</S.PreviousPriceCart>
-                                    <S.CurrentPriceCart>Price: $ 10</S.CurrentPriceCart>
-                                </div>
-                                    <S.RemoveItemButton>Remove from cart</S.RemoveItemButton>
-                            </S.GameInfo>
-                        </S.GameList>
+                        {items?.map((game) => (
+                            <CartItem key={game.id} game={game} />
+                        ))}
                     </ul>
                     <S.CheckoutContainer>
-                        <S.Total>Total: $ 20</S.Total>
+                        <S.Total>{items.length >= 2 ? `${items.length} games •` : `${items.length} game •`}</S.Total>
+                        <S.Total>Total: $ 10</S.Total>
                         <S.CheckoutBtn>Check-out</S.CheckoutBtn>
                     </S.CheckoutContainer>
                 </>
@@ -39,8 +33,6 @@ const CartPage = () => {
                     <img src={emptyCart} alt="Empty cart image" />
                 </S.EmptyCartContainer>
             )}
-
-
         </S.CartContentWrapper>
     )
 }

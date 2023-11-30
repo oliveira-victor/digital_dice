@@ -39,10 +39,6 @@ const GameCard = ({ game }: Props) => {
         }
     }
 
-    /* function showGameSummary() {
-
-    } */
-
     return (
         <S.GameCard>
             {!displayGameSummary ?
