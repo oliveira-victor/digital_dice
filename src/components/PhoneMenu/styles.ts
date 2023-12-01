@@ -1,5 +1,4 @@
 import styled, { keyframes } from "styled-components";
-import variables from "../../styles/variables";
 
 const bounce = keyframes`
     0%, 20%, 50%, 80%, 100% {transform: translate(8px, -8px);}
@@ -32,7 +31,7 @@ export const PhoneMenuButton = styled.li`
     width: 60px;
     height: 100%;
     text-align: center;
-    color: ${variables.mainColor};
+    color: #8c8c8c;
 `
 
 export const BtnIcon = styled.img`
