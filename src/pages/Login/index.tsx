@@ -1,6 +1,21 @@
+import { ContentWrapper } from "../../styles"
+
+import * as S from './styles'
+
 const Login = () => {
     return (
-        <h2>Login</h2>
+        <ContentWrapper>
+            <S.LoginContainer>
+                <S.LoginForm>
+                    <S.LoginLabel htmlFor="username">User name</S.LoginLabel>
+                    <S.LoginInput type="text" />
+                    <S.LoginLabel htmlFor="password">Password</S.LoginLabel>
+                    <S.LoginInput type="password" />
+                    <S.LoginButton>Login</S.LoginButton>
+                    <S.CreateAccountLink>Create an account</S.CreateAccountLink>
+                </S.LoginForm>
+            </S.LoginContainer>
+        </ContentWrapper>
     )
 }
 
