@@ -19,7 +19,7 @@ const CartItem = ({ game }: Props) => {
                 <div>
                     <S.GameCartTitle>{game.title}</S.GameCartTitle>
                     {game.previousPrice ? <S.PreviousPriceCart>$ {game.previousPrice}</S.PreviousPriceCart> : ''}
-                    <S.CurrentPriceCart>Price: $ {game.currentPrince}</S.CurrentPriceCart>
+                    <S.CurrentPriceCart>Price: $ {game.currentPrice}</S.CurrentPriceCart>
                 </div>
                 <S.RemoveItemButton onClick={() => dispatch(add(game))}>Remove from cart</S.RemoveItemButton>
             </S.GameInfo>

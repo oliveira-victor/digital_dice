@@ -22,7 +22,7 @@ export type Game = {
   id: number
   title: string
   previousPrice: number
-  currentPrince: number
+  currentPrice: number
   genre: string[]
   thumbnail: string
   info: string

@@ -65,7 +65,7 @@ const GameCard = ({ game }: Props) => {
                 <S.MoreInfoBtn onClick={() => setDisplayGameSummary(!displayGameSummary)}>{displayGameSummary ? 'Hide info' : 'More info'}</S.MoreInfoBtn>
             </S.GameInfoRow>
             <S.GameBuyRow>
-                <S.GamePrice>$: {game.currentPrince}</S.GamePrice>
+                <S.GamePrice>$: {game.currentPrice}</S.GamePrice>
                 {renderCartButton()}
             </S.GameBuyRow>
         </S.GameCard>

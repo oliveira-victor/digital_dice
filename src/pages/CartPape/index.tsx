@@ -11,6 +11,10 @@ const CartPage = () => {
 
     const items = useSelector((state: RootReducer) => state.cart.items)
 
+    const prices = items.map(game => game.currentPrice)
+
+    const totalPrice = prices.reduce((sum, price) => sum + price, 0)
+
     return (
         <S.CartContentWrapper>
             <SectionTitle>Your shopping cart</SectionTitle>
@@ -22,8 +26,8 @@ const CartPage = () => {
                         ))}
                     </ul>
                     <S.CheckoutContainer>
-                        <S.Total>{items.length >= 2 ? `${items.length} games •` : `${items.length} game •`}</S.Total>
-                        <S.Total>Total: $ 10</S.Total>
+                        <S.Total>{items.length >= 2 ? `${items.length} games ` : `${items.length} game •`}</S.Total>
+                        <S.Total>Total: $ {totalPrice}</S.Total>
                         <S.CheckoutBtn>Check-out</S.CheckoutBtn>
                     </S.CheckoutContainer>
                 </>
