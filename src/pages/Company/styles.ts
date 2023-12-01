@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import companyBanner from '../../assets/company.webp'
+import variables from "../../styles/variables";
 
 export const CompanyHero = styled.div`
     width: 100%;
@@ -30,9 +31,44 @@ export const firstWrapper = styled.div`
 export const secondWrapper = styled(firstWrapper)`
     grid-template-columns: 30% auto;
     margin: 100px auto;
+    padding: 60px 10px;
 `
 
 export const textContainer = styled.div`
     display: flex;
     align-items: center;
+`
+
+export const MainColorBg = styled.div`
+    background-color: ${variables.mainColor};
+    margin: 60px auto;
+
+    & p {
+        color: #fff;
+    }
+`
+
+export const PartnersTitle = styled.h3`
+    color: ${(props) => props.theme.cardTxtColor};
+    font-size: 32px;
+    text-align: center;
+`
+
+export const PartnersList = styled.ul`
+    margin: 40px auto 200px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+    justify-content: center;
+`
+
+export const PartnerContainer = styled.li`
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    margin-top: 60px;
+
+    & img {
+        height: 100%;
+    }
 `
