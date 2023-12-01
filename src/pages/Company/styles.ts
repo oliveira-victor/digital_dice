@@ -31,7 +31,7 @@ export const firstWrapper = styled.div`
 export const secondWrapper = styled(firstWrapper)`
     grid-template-columns: 30% auto;
     margin: 100px auto;
-    padding: 60px 10px;
+    padding: 100px 10px;
 `
 
 export const textContainer = styled.div`
