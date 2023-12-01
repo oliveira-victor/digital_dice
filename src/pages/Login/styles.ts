@@ -25,6 +25,7 @@ export const LoginForm = styled.form`
 export const LoginLabel = styled.label`
     margin-top: 30px;
     font-size: 24px;
+    color: ${variables.lightGrayBtn};
 `
 
 export const LoginInput = styled.input`
