@@ -10,6 +10,5 @@ export const HeroImg = styled.section`
 
     @media (max-width: 767px) {
         height: 70vh;
-        background-position: -140px;
     }
 `
