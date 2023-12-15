@@ -5,7 +5,7 @@ export const IntroBanner = styled.section`
     margin: 0 auto;
     position: relative;
     height: 768px;
-    transform: translateY(-80px);
+    transform: translateY(-40px);
 
     @media (max-width: 767px) {
             height: auto;
