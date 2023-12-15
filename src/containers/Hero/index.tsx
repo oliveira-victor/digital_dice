@@ -28,7 +28,7 @@ const Hero = () => {
                     <S.ReleaseTitle>Our latest release</S.ReleaseTitle>
                     <S.HeroGameTitle>The Jungle Quest</S.HeroGameTitle>
                     <S.HeroText>
-                        Help Iara save her people in this new incredible release <br />from <span>$ {release?.previousPrice}</span> to only {release?.currentPrice} for a limited time!
+                        Help Iara save her people in this new incredible <br /><span>$ {release?.previousPrice}</span> release for only $ {release?.currentPrice} for a limited time!
                     </S.HeroText>
                     {items.filter(e => e.title === 'The Jungle Quest').length > 0 ? (
                         <NavLink to='/cart'>
