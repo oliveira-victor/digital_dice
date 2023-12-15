@@ -6,9 +6,9 @@ export const HeroImg = styled.section`
     background-image: url(${heroImg});
     background-size: cover;
     background-position: bottom;
+    background-attachment: fixed;
     width: 100%;
     height: 80vh;
-    background-attachment: fixed;
     position: relative;
     text-align: right;
 
@@ -17,15 +17,11 @@ export const HeroImg = styled.section`
         text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.9);
 
         @media (max-width: 767px) {
-            padding-top: 20px;
-
-            button {
-                font-size: 20px;
-            }
+            padding-top: 14px;
         }
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 1023px) {
         height: 70vh;
         background-position: -140px;
         text-align: center;
@@ -48,6 +44,10 @@ export const ReleaseTitle = styled.button`
     padding: 10px 20px;
     background-color: ${variables.secondColor};
     color: #fff;
+
+    @media (max-width: 767px) {
+        font-size: 16px;
+    }
 `
 
 export const HeroGameTitle = styled.span`
@@ -93,7 +93,8 @@ export const HeroBtn = styled.button`
     }
 
     @media (max-width: 767px) {
-        margin-top: 80px;
+        margin-top: 60px;
+        font-size: 28px;
     }
 `
 
