@@ -96,3 +96,11 @@ export const HeroBtn = styled.button`
         margin-top: 80px;
     }
 `
+
+export const HeroCheckoutBtn = styled(HeroBtn)`
+    background-color: ${variables.greenColor};
+
+    &:hover {
+        background-color: ${variables.greenColorHover};
+    }
+`
