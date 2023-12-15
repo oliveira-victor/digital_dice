@@ -32,8 +32,6 @@ export const EmptyCartTxt = styled.span`
     }
 `
 
-
-
 export const CheckoutContainer = styled.div`
     display: flex;
     gap: 20px;
@@ -64,5 +62,9 @@ export const CheckoutBtn = styled(removeItemBtn)`
         background-color: ${variables.greenColorHover};
         transform: translateY(-4px);
         box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    @media (max-width: 767px) {
+        width: 100%;
     }
 `
