@@ -3,9 +3,6 @@ import { ContentWrapper, SectionTitle } from "../../styles"
 
 import * as S from './styles'
 
-import eye from '../../assets/eye.svg'
-import eyeOff from '../../assets/eyeOff.svg'
-
 const Login = () => {
 
     const [createNewAccount, setCreateNewAccount] = useState(false)
