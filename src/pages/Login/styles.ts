@@ -25,6 +25,7 @@ export const LoginForm = styled.form`
 export const LoginLabel = styled.label`
     margin-top: 30px;
     font-size: 24px;
+    display: block;
     color: ${variables.lightGrayBtn};
 `
 
@@ -39,7 +40,7 @@ export const LoginInput = styled.input`
     }
 `
 
-export const LoginButton = styled.button`
+export const SubmitButton = styled.button`
     background-color: ${variables.mainColor};
     color: #fff;
     width: 100%;
@@ -65,4 +66,35 @@ export const CreateAccountLink = styled.span`
     &:hover {
         text-decoration: underline;
     }
+`
+
+export const CreateAccountContainer = styled.div`
+    margin-top: 60px;
+    color: ${(props) => props.theme.cardTxtColor};
+
+    p {
+        font-size: 20px;
+    }
+`
+
+export const NewAccountForm = styled.form`
+    text-align: left;
+    width: 50%;
+    margin: 0 auto;
+
+    input {
+        width: 100%;
+    }
+`
+
+export const ShowHidePassword = styled.span`
+    cursor: pointer;
+    line-height: 30px;
+    color: ${variables.mainColor};
+`
+
+export const NameContainer = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2%;
 `
