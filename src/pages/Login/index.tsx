@@ -45,7 +45,7 @@ const Login = () => {
                         <S.LoginLabel htmlFor="tel">Phone number</S.LoginLabel>
                         <S.LoginInput type="tel" id="tel" />
                         <S.LoginLabel htmlFor="password">Create a password</S.LoginLabel>
-                        <S.LoginInput type={type} id="password" />
+                        <S.LoginInput type={type} id="createPassword" />
                         <S.ShowHidePassword onClick={() => type === 'password' ? setType('text') : setType('password')}>
                             {type === 'password' ? 'Show password' : 'Hide password'}
                         </S.ShowHidePassword>
