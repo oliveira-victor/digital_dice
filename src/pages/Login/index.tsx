@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { ContentWrapper, SectionTitle } from "../../styles"
 
+import variables from "../../styles/variables"
+
 import * as S from './styles'
 
 const Login = () => {
@@ -8,6 +10,16 @@ const Login = () => {
     const [createNewAccount, setCreateNewAccount] = useState(false)
 
     const [type, setType] = useState('password')
+
+    const [password, setPassword] = useState('')
+
+    const [confirmPassword, setConfirmPassword] = useState('')
+
+    const [matchingPassword, setMatchingPassword] = useState(true)
+
+    function validatePassword() {
+        password === confirmPassword ? setMatchingPassword(true) : setMatchingPassword(false)
+    }
 
     return (
         <ContentWrapper>
@@ -42,12 +54,18 @@ const Login = () => {
                         <S.LoginLabel htmlFor="tel">Phone number</S.LoginLabel>
                         <S.LoginInput type="tel" id="tel" />
                         <S.LoginLabel htmlFor="password">Create a password</S.LoginLabel>
-                        <S.LoginInput type={type} id="createPassword" />
+                        <S.LoginInput onBlur={() => validatePassword()} onChange={event => setPassword(event.target.value)} type={type} id="createPassword" />
                         <S.ShowHidePassword onClick={() => type === 'password' ? setType('text') : setType('password')}>
                             {type === 'password' ? 'Show password' : 'Hide password'}
                         </S.ShowHidePassword>
                         <S.LoginLabel htmlFor="password">Confirm your password</S.LoginLabel>
-                        <S.LoginInput type={type} id="password" />
+                        <S.LoginInput 
+                            onBlur={() => validatePassword()} 
+                            onChange={event => setConfirmPassword(event.target.value)} 
+                            type={type} 
+                            id="password" 
+                        />
+                        {matchingPassword ? '' : <span style={{color: variables.removeBtn}}>Your password must match</span>}
                         <S.SubmitButton>Create account</S.SubmitButton>
                     </S.NewAccountForm>
                 </S.CreateAccountContainer>
