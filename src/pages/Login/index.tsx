@@ -15,10 +15,20 @@ const Login = () => {
 
     const [confirmPassword, setConfirmPassword] = useState('')
 
-    const [matchingPassword, setMatchingPassword] = useState(true)
+    function matchingPassword() {
+        if (password !== confirmPassword) {
+            return <p style={{ color: variables.removeBtn }}>Your password must match</p>
+        } else if (password === confirmPassword && password !== '') {
+            return <p style={{ color: variables.greenColor }}>Your password is matching!</p>
+        }
+    }
 
-    function validatePassword() {
-        password === confirmPassword ? setMatchingPassword(true) : setMatchingPassword(false)
+    function passwordLenght() {
+        if  (password.length > 0) {
+            if (password === confirmPassword && password.length < 8) {
+                return <p style={{ color: variables.removeBtn }}>Your password must be at least 8 digits long</p>
+            }
+        }
     }
 
     return (
@@ -54,18 +64,18 @@ const Login = () => {
                         <S.LoginLabel htmlFor="tel">Phone number</S.LoginLabel>
                         <S.LoginInput type="tel" id="tel" />
                         <S.LoginLabel htmlFor="password">Create a password</S.LoginLabel>
-                        <S.LoginInput onBlur={() => validatePassword()} onChange={event => setPassword(event.target.value)} type={type} id="createPassword" />
+                        <S.LoginInput onChange={event => setPassword(event.target.value)} type={type} id="createPassword" />
                         <S.ShowHidePassword onClick={() => type === 'password' ? setType('text') : setType('password')}>
                             {type === 'password' ? 'Show password' : 'Hide password'}
                         </S.ShowHidePassword>
                         <S.LoginLabel htmlFor="password">Confirm your password</S.LoginLabel>
-                        <S.LoginInput 
-                            onBlur={() => validatePassword()} 
-                            onChange={event => setConfirmPassword(event.target.value)} 
-                            type={type} 
-                            id="password" 
+                        <S.LoginInput
+                            onChange={event => setConfirmPassword(event.target.value)}
+                            type={type}
+                            id="password"
                         />
-                        {matchingPassword ? '' : <span style={{color: variables.removeBtn}}>Your password must match</span>}
+                        {matchingPassword()}
+                        {passwordLenght()}
                         <S.SubmitButton>Create account</S.SubmitButton>
                     </S.NewAccountForm>
                 </S.CreateAccountContainer>

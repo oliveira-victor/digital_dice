@@ -86,6 +86,10 @@ export const NewAccountForm = styled.form`
         width: 100%;
     }
 
+    p {
+        font-size: 16px;
+    }
+
     @media (max-width: 1023px) {
         width: 90%;
     }
