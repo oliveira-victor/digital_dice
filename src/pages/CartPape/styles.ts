@@ -19,7 +19,11 @@ export const EmptyCartContainer = styled.div`
     padding: 20px;
 
     & img {
-        width: 250px;
+        width: 400px;
+
+        @media (max-width: 767px) {
+            width: 90%;
+        }
     }
 `
 

@@ -5,7 +5,7 @@ import CartItem from "../../components/CartItem"
 
 import * as S from './styles'
 
-import emptyCart from '../../assets/empty-cart.svg'
+import emptyCart from '../../assets/empty-cart.webp'
 
 const CartPage = () => {
 
