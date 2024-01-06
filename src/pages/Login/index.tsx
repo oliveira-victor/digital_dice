@@ -24,7 +24,7 @@ const Login = () => {
     }
 
     function passwordLenght() {
-        if  (password.length > 0) {
+        if (password.length > 0) {
             if (password === confirmPassword && password.length < 8) {
                 return <p style={{ color: variables.removeBtn }}>Your password must be at least 8 digits long</p>
             }
@@ -37,9 +37,9 @@ const Login = () => {
                 <S.LoginContainer>
                     <S.LoginForm>
                         <S.LoginLabel htmlFor="username">User name</S.LoginLabel>
-                        <S.LoginInput type="text" id="username" />
+                        <S.LoginInput type="text" name="username" />
                         <S.LoginLabel htmlFor="password">Password</S.LoginLabel>
-                        <S.LoginInput type="password" id="password" />
+                        <S.LoginInput type="password" name="password" />
                         <S.SubmitButton>Login</S.SubmitButton>
                         <S.CreateAccountLink onClick={() => setCreateNewAccount(true)}>Create an account</S.CreateAccountLink>
                     </S.LoginForm>
@@ -60,11 +60,13 @@ const Login = () => {
                             </div>
                         </S.NameContainer>
                         <S.LoginLabel htmlFor="email">E-mail</S.LoginLabel>
-                        <S.LoginInput type="email" id="email" />
+                        <S.LoginInput type="email" name="email" />
                         <S.LoginLabel htmlFor="tel">Phone number</S.LoginLabel>
-                        <S.LoginInput type="tel" id="tel" />
+                        <S.LoginInput type="tel" name="tel" />
+                        <S.LoginLabel htmlFor="userName">Create a user name</S.LoginLabel>
+                        <S.LoginInput type="text" name="userName" />
                         <S.LoginLabel htmlFor="password">Create a password</S.LoginLabel>
-                        <S.LoginInput onChange={event => setPassword(event.target.value)} type={type} id="createPassword" />
+                        <S.LoginInput onChange={event => setPassword(event.target.value)} type={type} name="createPassword" />
                         <S.ShowHidePassword onClick={() => type === 'password' ? setType('text') : setType('password')}>
                             {type === 'password' ? 'Show password' : 'Hide password'}
                         </S.ShowHidePassword>
@@ -72,7 +74,7 @@ const Login = () => {
                         <S.LoginInput
                             onChange={event => setConfirmPassword(event.target.value)}
                             type={type}
-                            id="password"
+                            name="password"
                         />
                         {matchingPassword()}
                         {passwordLenght()}
