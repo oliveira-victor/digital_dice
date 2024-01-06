@@ -6,6 +6,17 @@ const FadeIn = keyframes`
     100% { opacity: 1; }
 `
 
+export const CardImage = styled.div`
+    width: 330px;
+    height: 330px;
+    animation-name: ${FadeIn};
+    animation-duration: 1s;
+    background-size: cover;
+    background-position: center;
+    transition: all .7s ease;
+    background-size: 330px;
+`
+
 export const GameCard = styled.div`
     background-color: ${(props) => props.theme.mainColor};
     width: 350px;
@@ -21,12 +32,10 @@ export const GameCard = styled.div`
         box-shadow: ${(props) => props.theme.cardHoverShadow};
         transform: translateY(-4px);
     }
-`
 
-export const CardImage = styled.img`
-    width: 100%;
-    animation-name: ${FadeIn};
-    animation-duration: 1s;
+    &:hover ${CardImage} {
+        background-size: 346px;
+    }
 `
 
 export const GameTitle = styled.h3`
@@ -111,7 +120,7 @@ export const removeItemBtn = styled(BuyBtn)`
 export const GameSummary = styled.div`
     color: ${(props) => props.theme.cardTxtColor};
     padding: 0 20px;
-    height: 334px;
+    height: 330px;
     animation-name: ${FadeIn};
     animation-duration: 1s;
     display: flex;

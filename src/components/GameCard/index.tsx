@@ -42,7 +42,7 @@ const GameCard = ({ game }: Props) => {
     return (
         <S.GameCard>
             {!displayGameSummary ?
-                <S.CardImage src={game.thumbnail} alt={game.title} />
+                <S.CardImage style={{backgroundImage: `url(${game.thumbnail})`}}></S.CardImage>
                 : ''}
             <S.GameTitle>{game.title}</S.GameTitle>
             <S.GenreList>
