@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Federo', sans-serif;
         list-style: none;
         text-decoration: none;
+        scroll-behavior: smooth;
     }
 
     h2 {

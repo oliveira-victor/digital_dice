@@ -1,11 +1,13 @@
 import { SectionTitle } from "../../styles"
 import { useSelector } from "react-redux"
 import { RootReducer } from "../../store"
+import { useState } from "react"
 import CartItem from "../../components/CartItem"
 
 import * as S from './styles'
 
 import emptyCart from '../../assets/empty-cart.webp'
+import CheckoutForm from "../../containers/CheckoutForm"
 
 const CartPage = () => {
 
@@ -15,11 +17,13 @@ const CartPage = () => {
 
     const totalPrice = prices.reduce((sum, price) => sum + price, 0)
 
+    const [showForm, setShowForm] = useState(false)
+
     return (
         <S.CartContentWrapper>
-            <SectionTitle>Your shopping cart</SectionTitle>
             {items.length >= 1 ? (
                 <>
+                    <SectionTitle>Your shopping cart</SectionTitle>
                     <ul>
                         {items?.map((game) => (
                             <CartItem key={game.id} game={game} />
@@ -28,8 +32,13 @@ const CartPage = () => {
                     <S.CheckoutContainer>
                         <S.Total>{items.length >= 2 ? `${items.length} games ` : `${items.length} game •`}</S.Total>
                         <S.Total>Total: $ {totalPrice}</S.Total>
-                        <S.CheckoutBtn>Check-out</S.CheckoutBtn>
+                        {!showForm ? (
+                            <a href="#checkout-form"><S.CheckoutBtn onClick={() => setShowForm(true)}>Check-out</S.CheckoutBtn></a>
+                        ) : ''}
                     </S.CheckoutContainer>
+                    <div id="checkout-form">
+                        {showForm ? <CheckoutForm finalItems={items.length} finalPrice={totalPrice} /> : ''}
+                    </div>
                 </>
             ) : (
                 <S.EmptyCartContainer>

@@ -5,8 +5,15 @@ export const GameList = styled.li`
     padding: 8px;
     display: flex;
     gap: 10px;
-    border-top: 1px solid ${variables.mainColor};
-    border-bottom: 1px solid ${variables.mainColor};
+    background-color: ${(props) => props.theme.mainColor};
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 10px;
+    transition: all .2s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
 `
 
 export const GameInfo = styled.div`
