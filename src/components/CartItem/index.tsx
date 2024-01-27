@@ -21,7 +21,7 @@ const CartItem = ({ game }: Props) => {
                     {game.previousPrice ? <S.PreviousPriceCart>$ {game.previousPrice}</S.PreviousPriceCart> : ''}
                     <S.CurrentPriceCart>Price: $ {game.currentPrice}</S.CurrentPriceCart>
                 </div>
-                <S.RemoveItemButton onClick={() => dispatch(add(game))}>Remove from cart</S.RemoveItemButton>
+                <S.RemoveItemButton onClick={() => dispatch(add(game))}>Remove</S.RemoveItemButton>
             </S.GameInfo>
         </S.GameList>
     )
