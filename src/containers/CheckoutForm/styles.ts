@@ -9,6 +9,19 @@ export const CartForm = styled.form`
     padding: 30px;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    input {
+        width: 100%;
+        height: 46px;
+        padding: 6px;
+        font-size: 20px;
+        margin-bottom: 20px;
+        border: 2px solid transparent;
+
+        &.error {
+            border: 2px solid red;
+        }
+    }
 `
 
 export const InputsContainer = styled.div`
@@ -25,6 +38,13 @@ export const FormTitle = styled.h3`
     font-size: 26px;
     color: ${(props) => props.theme.cardTxtColor};
     margin-bottom: 20px;
+`
+
+export const FormLabel = styled.label`
+    color: ${variables.lightGrayBtn};
+    font-size: 20px;
+    margin-bottom: 6px;
+    display: block;
 `
 
 export const submitContainer = styled.div`
@@ -48,22 +68,14 @@ export const DoubleFields = styled.div`
     gap: 10px;
 `
 
+export const AddressDoubleField = styled.div`
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 10px;
+`
+
 export const TripleFields = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
-`
-
-export const PurchaseBtn = styled.button`
-    border: none;
-    border-radius: 6px;
-    background-color: ${variables.greenColor};
-    color: #fff;
-    padding: 10px 18px;
-    font-size: 24px;
-    cursor: pointer;
-
-    &:hover {
-        background-color: ${variables.greenColorHover};
-    }
 `

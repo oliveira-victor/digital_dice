@@ -31,7 +31,7 @@ export type Game = {
 
 function App() {
 
-  const [themeIsDark, setThemeIsDark] = useState(false)
+  const [themeIsDark, setThemeIsDark] = useState(true)
 
   const switchTheme = () => {
     setThemeIsDark(!themeIsDark)

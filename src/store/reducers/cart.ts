@@ -25,9 +25,12 @@ const cartSlice = createSlice({
             } else {
                 state.items.push(game)
             }
+        },
+        clear: (state) => {
+            state.items = []
         }
     }
 })
 
-export const { add } = cartSlice.actions
+export const { add, clear } = cartSlice.actions
 export default cartSlice.reducer
