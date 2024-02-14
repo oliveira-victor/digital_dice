@@ -1,9 +1,6 @@
 import styled from "styled-components";
 import variables from "../../styles/variables";
 
-export const CheckoutContainer = styled.section`
-`
-
 export const CartForm = styled.form`
     background-color: ${(props) => props.theme.mainColor};
     padding: 30px;

@@ -8,6 +8,7 @@ import { useEffect } from 'react'
 import { usePurchaseMutation } from '../../services/api'
 import { useDispatch, useSelector } from 'react-redux'
 import { clear } from '../../store/reducers/cart'
+import { orderPlaced, setOrderNumber } from '../../store/reducers/orderPlaced'
 import PaymentBtn from '../../components/PaymentBtn'
 import { RootReducer } from '../../store'
 
@@ -97,14 +98,14 @@ const CheckoutForm = ({ finalPrice, finalItems }: Props) => {
 
     useEffect(() => {
         if (isSuccess) {
-            console.log(data)
+            dispatch(setOrderNumber(data.orderId))
+            dispatch(orderPlaced())
             dispatch(clear())
-            console.log('success!')
         }
     }, [isSuccess, useDispatch])
 
     return (
-        <S.CheckoutContainer>
+        <section>
             <SectionTitle>Checkout</SectionTitle>
             <S.CartForm onSubmit={form.handleSubmit}>
                 <S.InputsContainer>
@@ -286,7 +287,7 @@ const CheckoutForm = ({ finalPrice, finalItems }: Props) => {
                     />
                 </S.submitContainer>
             </S.CartForm>
-        </S.CheckoutContainer>
+        </section>
     )
 }
 
