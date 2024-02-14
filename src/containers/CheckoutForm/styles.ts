@@ -13,7 +13,7 @@ export const CartForm = styled.form`
         padding: 6px;
         font-size: 20px;
         margin-bottom: 20px;
-        border: 2px solid transparent;
+        border: 2px solid ${variables.lightGrayBtn};
 
         &.error {
             border: 2px solid red;
