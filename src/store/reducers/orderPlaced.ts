@@ -19,12 +19,7 @@ const modalSlice = createSlice({
         },
         setOrderNumber: (state, action: PayloadAction<number>) => {
             const NewOrderNumber = action.payload
-            
-            if (state.orderNumber === 0) {
-                state.orderNumber = NewOrderNumber
-            } else {
-                state.orderNumber = 0
-            }
+            state.orderNumber = NewOrderNumber
         }
     }
 })
