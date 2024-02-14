@@ -40,7 +40,7 @@ const Login = () => {
                         <S.LoginInput type="text" name="username" />
                         <S.LoginLabel htmlFor="password">Password</S.LoginLabel>
                         <S.LoginInput type="password" name="password" />
-                        <S.SubmitButton>Login</S.SubmitButton>
+                        <S.SubmitButton onClick={() => alert('This is just a login simulation. :)')}>Login</S.SubmitButton>
                         <S.CreateAccountLink onClick={() => setCreateNewAccount(true)}>Create an account</S.CreateAccountLink>
                     </S.LoginForm>
                 </S.LoginContainer>
@@ -78,7 +78,7 @@ const Login = () => {
                         />
                         {matchingPassword()}
                         {passwordLenght()}
-                        <S.SubmitButton>Create account</S.SubmitButton>
+                        <S.SubmitButton onClick={() => alert('This is just a login simulation. :)')}>Create account</S.SubmitButton>
                     </S.NewAccountForm>
                 </S.CreateAccountContainer>
             )}
