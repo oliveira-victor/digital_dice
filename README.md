@@ -15,6 +15,7 @@ Deploy link: https://victoroliveira.vercel.app/
 ## Technologies used:
 * React JS
 * Vite
+* TypeScript
 * React Router DOM
 * Redux / Redux-toolkit
 * Styled-Components
