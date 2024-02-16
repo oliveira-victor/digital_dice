@@ -1,12 +1,13 @@
 import GameCard from "../../components/GameCard"
+import Loader from "../../components/loader"
 import { useGetGamesQuery } from "../../services/api"
-import { CardsContainer, SectionTitle } from "../../styles"
 
+import { CardsContainer, SectionTitle } from "../../styles"
 
 const GamesSection = () => {
     const { data: games, isLoading } = useGetGamesQuery()
 
-    if (isLoading) return <h2>Loading...</h2>
+    if (isLoading) return <Loader />
 
     return (
         <section>

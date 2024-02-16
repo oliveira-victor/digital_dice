@@ -25,11 +25,12 @@ const Hero = () => {
         <S.HeroImg>
             <S.HeroGradient></S.HeroGradient>
             <ContentWrapper>
-                <div>
+                {release && (
+                    <div>
                     <S.ReleaseTitle>Our latest release</S.ReleaseTitle>
                     <S.HeroGameTitle>The Jungle Quest</S.HeroGameTitle>
                     <S.HeroText>
-                        Help Iara save her people in this new incredible <br /><span>{currencyFormat.format(release?.previousPrice)}</span> release for only {currencyFormat.format(release?.currentPrice)} for a limited time!
+                        {<p>Help Iara save her people in this new incredible <br /><span>{currencyFormat.format(release.previousPrice)}</span> release for only {currencyFormat.format(release.currentPrice)} for a limited time!</p>}
                     </S.HeroText>
                     {items.filter(e => e.title === 'The Jungle Quest').length > 0 ? (
                         <NavLink to='/cart'>
@@ -39,6 +40,7 @@ const Hero = () => {
                         <S.HeroBtn onClick={addReleaseToCart}>Get it now!</S.HeroBtn>
                     )}
                 </div>
+                )}
             </ContentWrapper>
         </S.HeroImg>
     )
