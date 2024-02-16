@@ -1,16 +1,18 @@
+import { useDispatch, useSelector } from 'react-redux'
 import { useFormik } from 'formik'
-import { SectionTitle } from '../../styles'
 import * as Yup from 'yup'
 import InputMask from 'react-input-mask'
 
-import * as S from './styles'
+import { currencyFormat } from '../../utils/currency'
 import { useEffect } from 'react'
 import { usePurchaseMutation } from '../../services/api'
-import { useDispatch, useSelector } from 'react-redux'
 import { clear } from '../../store/reducers/cart'
 import { orderPlaced, setOrderNumber } from '../../store/reducers/orderPlaced'
 import PaymentBtn from '../../components/PaymentBtn'
 import { RootReducer } from '../../store'
+
+import { SectionTitle } from '../../styles'
+import * as S from './styles'
 
 type Props = {
     finalPrice: number
@@ -279,7 +281,7 @@ const CheckoutForm = ({ finalPrice, finalItems }: Props) => {
                 </S.InputsContainer>
 
                 <S.submitContainer>
-                    <p>You're buying {finalItems} {finalItems > 1 ? 'games' : 'game'} for $ {finalPrice}</p>
+                    <p>You're buying {finalItems} {finalItems > 1 ? 'games' : 'game'} for {currencyFormat.format(finalPrice)}</p>
                     <PaymentBtn 
                         onClick={form.handleSubmit}
                         disabled={isLoading}

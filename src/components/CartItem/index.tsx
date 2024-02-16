@@ -1,6 +1,8 @@
 import { useDispatch } from 'react-redux'
+
 import { Game } from '../../App'
 import { add } from '../../store/reducers/cart'
+import { currencyFormat } from '../../utils/currency'
 
 import * as S from './styles'
 
@@ -18,8 +20,8 @@ const CartItem = ({ game }: Props) => {
             <S.GameInfo>
                 <div>
                     <S.GameCartTitle>{game.title}</S.GameCartTitle>
-                    {game.previousPrice ? <S.PreviousPriceCart>$ {game.previousPrice}</S.PreviousPriceCart> : ''}
-                    <S.CurrentPriceCart>Price: $ {game.currentPrice}</S.CurrentPriceCart>
+                    {game.previousPrice ? <S.PreviousPriceCart>{currencyFormat.format(game.previousPrice)}</S.PreviousPriceCart> : ''}
+                    <S.CurrentPriceCart>Price: {currencyFormat.format(game.currentPrice)}</S.CurrentPriceCart>
                 </div>
                 <S.RemoveItemButton onClick={() => dispatch(add(game))}>Remove</S.RemoveItemButton>
             </S.GameInfo>

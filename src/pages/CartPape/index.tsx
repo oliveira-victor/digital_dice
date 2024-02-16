@@ -1,11 +1,13 @@
-import { SectionTitle } from "../../styles"
-import { useDispatch, useSelector } from "react-redux"
-import { RootReducer } from "../../store"
 import { useState } from "react"
+import { useDispatch, useSelector } from "react-redux"
+
+import { RootReducer } from "../../store"
 import CartItem from "../../components/CartItem"
 import CheckoutForm from "../../containers/CheckoutForm"
 import { orderPlaced } from '../../store/reducers/orderPlaced'
+import { currencyFormat } from '../../utils/currency'
 
+import { SectionTitle } from "../../styles"
 import * as S from './styles'
 
 import emptyCart from '../../assets/empty-cart.webp'
@@ -55,7 +57,7 @@ const CartPage = () => {
                         </ul>
                         <S.CheckoutContainer>
                             <S.Total>{items.length >= 2 ? `${items.length} games ` : `${items.length} game •`}</S.Total>
-                            <S.Total>Total: $ {totalPrice}</S.Total>
+                            <S.Total>Total: {currencyFormat.format(totalPrice)}</S.Total>
                             {!showForm ? (
                                 <a href="#checkout-form"><S.CheckoutBtn onClick={() => setShowForm(true)}>Check-out</S.CheckoutBtn></a>
                             ) : ''}

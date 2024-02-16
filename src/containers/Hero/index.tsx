@@ -5,6 +5,7 @@ import { ContentWrapper } from '../../styles'
 import { add } from '../../store/reducers/cart'
 import * as S from './styles'
 import { NavLink } from 'react-router-dom'
+import { currencyFormat } from '../../utils/currency'
 
 const Hero = () => {
 
@@ -28,7 +29,7 @@ const Hero = () => {
                     <S.ReleaseTitle>Our latest release</S.ReleaseTitle>
                     <S.HeroGameTitle>The Jungle Quest</S.HeroGameTitle>
                     <S.HeroText>
-                        Help Iara save her people in this new incredible <br /><span>$ {release?.previousPrice}</span> release for only $ {release?.currentPrice} for a limited time!
+                        Help Iara save her people in this new incredible <br /><span>{currencyFormat.format(release?.previousPrice)}</span> release for only {currencyFormat.format(release?.currentPrice)} for a limited time!
                     </S.HeroText>
                     {items.filter(e => e.title === 'The Jungle Quest').length > 0 ? (
                         <NavLink to='/cart'>

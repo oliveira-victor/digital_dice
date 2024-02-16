@@ -1,9 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux'
+import { useState } from 'react'
+
 import { Game } from '../../App'
 import { add } from '../../store/reducers/cart'
 import { revealMsg } from '../../store/reducers/reveal'
 import { RootReducer } from '../../store'
-import { useState } from 'react'
+import { currencyFormat } from '../../utils/currency'
 
 import * as S from './styles'
 
@@ -59,13 +61,13 @@ const GameCard = ({ game }: Props) => {
                 : ''}
             <S.GameInfoRow>
                 {game.previousPrice ?
-                    <S.PreviousPrice>$: {game.previousPrice}</S.PreviousPrice>
+                    <S.PreviousPrice>{currencyFormat.format(game.previousPrice)}</S.PreviousPrice>
                     : <span></span>
                 }
                 <S.MoreInfoBtn onClick={() => setDisplayGameSummary(!displayGameSummary)}>{displayGameSummary ? 'Hide info' : 'More info'}</S.MoreInfoBtn>
             </S.GameInfoRow>
             <S.GameBuyRow>
-                <S.GamePrice>$: {game.currentPrice}</S.GamePrice>
+                <S.GamePrice>{currencyFormat.format(game.currentPrice)}</S.GamePrice>
                 {renderCartButton()}
             </S.GameBuyRow>
         </S.GameCard>
