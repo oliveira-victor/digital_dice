@@ -1,6 +1,11 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import heroImg from '../../assets/hero.webp'
 import variables from "../../styles/variables";
+
+const FadeIn = keyframes`
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+`
 
 export const HeroImg = styled.section`
     background-image: url(${heroImg});
@@ -35,6 +40,12 @@ export const HeroGradient = styled.div`
     bottom: 0;
     background: rgb(${(props) => props.theme.gradientBg});
     background: linear-gradient(0deg, rgba(${(props) => props.theme.gradientBg},1) 0%, rgba(${(props) => props.theme.gradientBg},0) 100%);
+`
+
+export const HeroHighlightData = styled.div`
+    animation-name: ${FadeIn};
+    animation-duration: 1s;
+    transition: all .2s ease;
 `
 
 export const ReleaseTitle = styled.button`

@@ -26,7 +26,7 @@ const Hero = () => {
             <S.HeroGradient></S.HeroGradient>
             <ContentWrapper>
                 {release && (
-                    <div>
+                    <S.HeroHighlightData>
                     <S.ReleaseTitle>Our latest release</S.ReleaseTitle>
                     <S.HeroGameTitle>The Jungle Quest</S.HeroGameTitle>
                     <S.HeroText>
@@ -39,7 +39,7 @@ const Hero = () => {
                     ) : (
                         <S.HeroBtn onClick={addReleaseToCart}>Get it now!</S.HeroBtn>
                     )}
-                </div>
+                </S.HeroHighlightData>
                 )}
             </ContentWrapper>
         </S.HeroImg>
