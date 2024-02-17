@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import companyBanner from '../../assets/company.webp'
+import companyBanner from '../../assets/images/company.webp'
 import variables from "../../styles/variables";
 
 export const CompanyHero = styled.div`

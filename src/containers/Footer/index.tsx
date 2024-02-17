@@ -1,9 +1,9 @@
 import * as S from './styles'
 
-import gamerBoy from '../../assets/gamerBoy.webp'
-import instagramIcon from '../../assets/icon-instagram.svg'
-import facebookIcon from '../../assets/icon-facebook.svg'
-import twitterIcon from '../../assets/icon-twitter.svg'
+import gamerBoy from '../../assets/images/gamerBoy.webp'
+import instagramIcon from '../../assets/images/icon-instagram.svg'
+import facebookIcon from '../../assets/images/icon-facebook.svg'
+import twitterIcon from '../../assets/images/icon-twitter.svg'
 
 const Footer = () => {
     return (

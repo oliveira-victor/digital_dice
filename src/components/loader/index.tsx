@@ -1,6 +1,6 @@
 import { LoaderContainer } from './styles'
 
-import loaderImg from '../../assets/loader.gif'
+import loaderImg from '../../assets/images/loader.gif'
 
 const Loader = () => {
     return (

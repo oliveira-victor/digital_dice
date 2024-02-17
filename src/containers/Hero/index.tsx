@@ -1,11 +1,13 @@
 import { useDispatch, useSelector } from 'react-redux'
+import { NavLink } from 'react-router-dom'
+
 import { useGetGamesQuery } from '../../services/api'
 import { RootReducer } from '../../store'
-import { ContentWrapper } from '../../styles'
 import { add } from '../../store/reducers/cart'
-import * as S from './styles'
-import { NavLink } from 'react-router-dom'
 import { currencyFormat } from '../../utils/currency'
+
+import { ContentWrapper } from '../../styles'
+import * as S from './styles'
 
 const Hero = () => {
 

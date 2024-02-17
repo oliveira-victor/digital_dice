@@ -1,13 +1,14 @@
 import { ContentWrapper, Paragraph, SectionTitle } from '../../styles'
-import * as S from './/styles'
+import * as S from './styles'
 
-import gamingOffice from '../../assets/gamingOffice.webp'
-import ceo from '../../assets/digitaldice-ceo.webp'
-import team1 from '../../assets/team1.webp'
-import team2 from '../../assets/team2.webp'
-import partner1 from '../../assets/partner1.svg'
-import partner2 from '../../assets/partner2.svg'
-import partner3 from '../../assets/partner3.svg'
+import gamingOffice from '../../assets/images/gamingOffice.webp'
+import ceo from '../../assets/images/digitaldice-ceo.webp'
+import team1 from '../../assets/images/team1.webp'
+import team2 from '../../assets/images/team2.webp'
+import partner1 from '../../assets/images/partner1.svg'
+import partner2 from '../../assets/images/partner2.svg'
+import partner3 from '../../assets/images/partner3.svg'
+
 
 const Company = () => {
     return (

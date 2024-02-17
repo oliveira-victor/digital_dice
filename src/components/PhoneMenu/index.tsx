@@ -4,10 +4,10 @@ import { useSelector } from 'react-redux'
 
 import * as S from './styles'
 
-import controllerIcon from '../../assets/ico-controller.svg'
-import loginIcon from '../../assets/ico-login.svg'
-import aboutIcon from '../../assets/ico-about.svg'
-import mobileCartIcon from '../../assets/ico-mobilecart.svg'
+import controllerIcon from '../../assets/images/ico-controller.svg'
+import loginIcon from '../../assets/images/ico-login.svg'
+import aboutIcon from '../../assets/images/ico-about.svg'
+import mobileCartIcon from '../../assets/images/ico-mobilecart.svg'
 
 const PhoneMenu = () => {
 

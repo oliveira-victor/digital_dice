@@ -1,6 +1,6 @@
 import * as S from './styles'
 
-import gamerGirl from '../../assets/gamerGirl.webp'
+import gamerGirl from '../../assets/images/gamerGirl.webp'
 
 const InitialBanner = () => {
     return (

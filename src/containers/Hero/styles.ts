@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import heroImg from '../../assets/hero.webp'
+import heroImg from '../../assets/images/hero.webp'
 import variables from "../../styles/variables";
 
 const FadeIn = keyframes`

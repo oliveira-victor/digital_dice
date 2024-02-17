@@ -1,8 +1,8 @@
 import { useState } from "react"
-import { ContentWrapper, SectionTitle } from "../../styles"
 
 import variables from "../../styles/variables"
 
+import { ContentWrapper, SectionTitle } from "../../styles"
 import * as S from './styles'
 
 const Login = () => {

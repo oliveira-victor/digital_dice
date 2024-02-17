@@ -10,8 +10,8 @@ import { currencyFormat } from '../../utils/currency'
 import { SectionTitle } from "../../styles"
 import * as S from './styles'
 
-import emptyCart from '../../assets/empty-cart.webp'
-import happyChars from '../../assets/happyChars.webp'
+import emptyCart from '../../assets/images/empty-cart.webp'
+import happyChars from '../../assets/images/happyChars.webp'
 
 const CartPage = () => {
 
