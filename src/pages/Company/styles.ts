@@ -19,6 +19,7 @@ export const firstWrapper = styled.div`
 
     & img {
         width: 100%;
+        border-radius: 10px;
     }
 
     @media (max-width: 1023px) {
@@ -28,10 +29,18 @@ export const firstWrapper = styled.div`
     }
 `
 
-export const secondWrapper = styled(firstWrapper)`
-    grid-template-columns: 30% auto;
+export const secondWrapper = styled.div`
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
     margin: 100px auto;
     padding: 100px 10px;
+
+    img {
+        width: 300px;
+        border-radius: 10px;
+    }
 `
 
 export const textContainer = styled.div`
