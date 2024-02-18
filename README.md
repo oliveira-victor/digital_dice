@@ -4,6 +4,8 @@ This repository contains the source code for an e-commerce application built wit
 
 Deploy link: https://digitaldice.vercel.app/
 
+https://github.com/oliveira-victor/digital_dice/assets/116602113/33a8d085-ae53-4d60-bbac-0eb8fb0764ad
+
 ## Features
 
 * Game catalog: Explore a comprehensive list of digital games with various genres, description and prices, provided by ann API.
