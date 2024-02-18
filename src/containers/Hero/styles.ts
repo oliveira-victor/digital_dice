@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import heroImg from '../../assets/images/hero.webp'
-import variables from "../../styles/colors";
+import colors from "../../styles/colors";
 
 const FadeIn = keyframes`
     0% { opacity: 0; }
@@ -53,7 +53,7 @@ export const ReleaseTitle = styled.button`
     border: none;
     border-radius: 6px;
     padding: 10px 20px;
-    background-color: ${variables.secondColor};
+    background-color: ${colors.secondColor};
     color: #fff;
 
     @media (max-width: 767px) {
@@ -88,7 +88,7 @@ export const HeroText = styled.p`
 `
 
 export const HeroBtn = styled.button`
-    background-color: ${variables.mainColor};
+    background-color: ${colors.mainColor};
     color: #fff;
     font-size: 32px;
     margin-top: 20px;
@@ -100,7 +100,7 @@ export const HeroBtn = styled.button`
 
     &:hover {
         transform: translateY(-4px);
-        background-color: ${variables.addBtnHover};
+        background-color: ${colors.addBtnHover};
     }
 
     @media (max-width: 767px) {
@@ -110,9 +110,9 @@ export const HeroBtn = styled.button`
 `
 
 export const HeroCheckoutBtn = styled(HeroBtn)`
-    background-color: ${variables.greenColor};
+    background-color: ${colors.greenColor};
 
     &:hover {
-        background-color: ${variables.greenColorHover};
+        background-color: ${colors.greenColorHover};
     }
 `

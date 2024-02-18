@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import variables from "../../styles/colors";
+import colors from "../../styles/colors";
 
 export const LoginContainer = styled.div`
     width: 60%;
@@ -26,7 +26,7 @@ export const LoginLabel = styled.label`
     margin-top: 30px;
     font-size: 24px;
     display: block;
-    color: ${variables.lightGrayBtn};
+    color: ${colors.lightGrayBtn};
 `
 
 export const LoginInput = styled.input`
@@ -36,12 +36,12 @@ export const LoginInput = styled.input`
     font-size: 20px;
 
     &:focus {
-        outline-color: ${variables.mainColor};
+        outline-color: ${colors.mainColor};
     }
 `
 
 export const SubmitButton = styled.button`
-    background-color: ${variables.mainColor};
+    background-color: ${colors.mainColor};
     color: #fff;
     width: 100%;
     margin: 0 auto;
@@ -53,12 +53,12 @@ export const SubmitButton = styled.button`
     cursor: pointer;
 
     &:hover {
-        background-color: ${variables.addBtnHover};
+        background-color: ${colors.addBtnHover};
     }
 `
 
 export const CreateAccountLink = styled.span`
-    color: ${variables.mainColor};
+    color: ${colors.mainColor};
     margin-top: 20px;
     font-size: 20px;
     cursor: pointer;
@@ -98,7 +98,7 @@ export const NewAccountForm = styled.form`
 export const ShowHidePassword = styled.span`
     cursor: pointer;
     line-height: 30px;
-    color: ${variables.mainColor};
+    color: ${colors.mainColor};
 `
 
 export const NameContainer = styled.div`

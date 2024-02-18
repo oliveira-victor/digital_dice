@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
-import variables from "./colors";
+import colors from "./colors";
 
 const GlobalStyle = createGlobalStyle`
     * {
@@ -52,8 +52,8 @@ export const CardsContainer = styled.div`
 `
 
 export const SectionTitle = styled.h2`
-    color: ${variables.mainColor};
-    border-bottom: 2px solid ${variables.mainColor};
+    color: ${colors.mainColor};
+    border-bottom: 2px solid ${colors.mainColor};
     margin-bottom: 80px;
 `
 

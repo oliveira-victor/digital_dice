@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import variables from "../../styles/colors";
+import colors from "../../styles/colors";
 
 export const GameList = styled.li`
     padding: 8px;
@@ -46,7 +46,7 @@ export const GameCartTitle = styled.h3`
 export const PreviousPriceCart = styled.span`
     font-size: 20px;
     text-decoration: line-through;
-    color: ${variables.lightGrayBtn};
+    color: ${colors.lightGrayBtn};
     display: block;
 `
 
@@ -58,7 +58,7 @@ export const CurrentPriceCart = styled.span`
 export const RemoveItemButton = styled.button`
     height: 40px;
     padding: 0px 30px;
-    background-color: ${variables.removeBtn};
+    background-color: ${colors.removeBtn};
     font-size: 16px;
     border: none;
     border-radius: 6px;
@@ -66,7 +66,7 @@ export const RemoveItemButton = styled.button`
     cursor: pointer;
 
     &:hover {
-        background-color: ${variables.removeBtnHover};
+        background-color: ${colors.removeBtnHover};
     }
 
     @media (max-width: 767px) {

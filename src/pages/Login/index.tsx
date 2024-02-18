@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-import variables from "../../styles/colors"
+import colors from "../../styles/colors"
 
 import { ContentWrapper, SectionTitle } from "../../styles"
 import * as S from './styles'
@@ -17,16 +17,16 @@ const Login = () => {
 
     function matchingPassword() {
         if (password !== confirmPassword) {
-            return <p style={{ color: variables.removeBtn }}>Your password must match</p>
+            return <p style={{ color: colors.removeBtn }}>Your password must match</p>
         } else if (password === confirmPassword && password !== '') {
-            return <p style={{ color: variables.greenColor }}>Your password is matching!</p>
+            return <p style={{ color: colors.greenColor }}>Your password is matching!</p>
         }
     }
 
     function passwordLenght() {
         if (password.length > 0) {
             if (password === confirmPassword && password.length < 8) {
-                return <p style={{ color: variables.removeBtn }}>Your password must be at least 8 digits long</p>
+                return <p style={{ color: colors.removeBtn }}>Your password must be at least 8 digits long</p>
             }
         }
     }

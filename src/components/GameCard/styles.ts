@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import variables from "../../styles/colors";
+import colors from "../../styles/colors";
 
 const FadeIn = keyframes`
     0% { opacity: 0; }
@@ -71,7 +71,7 @@ export const GameInfoRow = styled.div`
 
 export const PreviousPrice = styled.div`
     font-size: 24px;
-    color: ${variables.lightGrayBtn};
+    color: ${colors.lightGrayBtn};
     text-decoration: line-through;
 `
 
@@ -80,13 +80,13 @@ export const MoreInfoBtn = styled.button`
     padding: 6px 0;
     font-size: 20px;
     color: #fff;
-    background-color: ${variables.secondColor};
+    background-color: ${colors.secondColor};
     border: none;
     border-radius: 6px;
     cursor: pointer;
 
     &:hover {
-        background-color: ${variables.infoBtnHover};
+        background-color: ${colors.infoBtnHover};
     }
 `
 
@@ -101,19 +101,19 @@ export const GamePrice = styled.div`
 
 export const BuyBtn = styled(MoreInfoBtn)`
     padding: 14px 16px;
-    background-color: ${variables.mainColor};
+    background-color: ${colors.mainColor};
     font-size: 20px;
 
     &:hover {
-        background-color: ${variables.addBtnHover};
+        background-color: ${colors.addBtnHover};
     }
 `
 
 export const removeItemBtn = styled(BuyBtn)`
-    background-color: ${variables.removeBtn};
+    background-color: ${colors.removeBtn};
 
     &:hover {
-        background-color: ${variables.removeBtnHover};
+        background-color: ${colors.removeBtnHover};
     }
 `
 

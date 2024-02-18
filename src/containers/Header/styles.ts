@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 
-import variables from "../../styles/colors";
+import colors from "../../styles/colors";
 
 const bounce = keyframes`
     0%, 20%, 50%, 80%, 100% {transform: translate(8px, -8px);}
@@ -41,13 +41,13 @@ export const MenuList = styled.ul`
 
 export const MenuOption = styled.li`
     padding: 10px 20px;
-    color: ${variables.lightGrayBtn};
+    color: ${colors.lightGrayBtn};
     font-size: 20px;
     transition: all .5s ease;
     text-decoration: none;
 
     &:hover {
-        color: ${variables.mainColor};
+        color: ${colors.mainColor};
     }
 `
 

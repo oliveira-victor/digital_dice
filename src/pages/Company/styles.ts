@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import companyBanner from '../../assets/images/company.webp'
-import variables from "../../styles/colors";
+import colors from "../../styles/colors";
 
 export const CompanyHero = styled.div`
     width: 100%;
@@ -49,7 +49,7 @@ export const textContainer = styled.div`
 `
 
 export const MainColorBg = styled.div`
-    background-color: ${variables.mainColor};
+    background-color: ${colors.mainColor};
     margin: 60px auto;
 
     & p {

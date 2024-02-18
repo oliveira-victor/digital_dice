@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import variables from "../../styles/colors";
+import colors from "../../styles/colors";
 
 export const CartForm = styled.form`
     background-color: ${(props) => props.theme.mainColor};
@@ -13,7 +13,7 @@ export const CartForm = styled.form`
         padding: 6px;
         font-size: 20px;
         margin-bottom: 20px;
-        border: 2px solid ${variables.lightGrayBtn};
+        border: 2px solid ${colors.lightGrayBtn};
 
         &.error {
             border: 2px solid red;
@@ -38,7 +38,7 @@ export const FormTitle = styled.h3`
 `
 
 export const FormLabel = styled.label`
-    color: ${variables.lightGrayBtn};
+    color: ${colors.lightGrayBtn};
     font-size: 20px;
     margin-bottom: 6px;
     display: block;

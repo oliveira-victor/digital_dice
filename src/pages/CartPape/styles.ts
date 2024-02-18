@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ContentWrapper } from "../../styles";
-import variables from "../../styles/colors";
+import colors from "../../styles/colors";
 import { removeItemBtn } from "../../components/GameCard/styles";
 
 export const Modal = styled.div`
@@ -100,7 +100,7 @@ export const EmptyCartContainer = styled.div`
 
 export const EmptyCartTxt = styled.span`
     font-size: 30px;
-    color: ${variables.lightGrayBtn};
+    color: ${colors.lightGrayBtn};
 
     @media (max-width: 767px) {
         text-align: center;
@@ -128,13 +128,13 @@ export const Total = styled.span`
 `
 
 export const CheckoutBtn = styled(removeItemBtn)`
-    background-color: ${variables.greenColor};
+    background-color: ${colors.greenColor};
     font-size: 28px;
     height: auto;
     display: block;
 
     &:hover {
-        background-color: ${variables.greenColorHover};
+        background-color: ${colors.greenColorHover};
         transform: translateY(-4px);
         box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.6);
     }

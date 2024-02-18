@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import variables from "../../styles/colors";
+import colors from "../../styles/colors";
 
 export const IntroBanner = styled.section`
     margin: 0 auto;
@@ -29,7 +29,7 @@ export const IntroBanner = styled.section`
 `
 
 export const BannerMsg = styled.div`
-    background-color: ${variables.mainColor};
+    background-color: ${colors.mainColor};
     padding: 124px 90px;
     width: 100%;
     font-size: 62px;

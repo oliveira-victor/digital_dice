@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import variables from "../../styles/colors";
+import colors from "../../styles/colors";
 import { ContentWrapper } from "../../styles";
 
 export const Footer = styled.footer`
-    background-color: ${variables.mainColor};
+    background-color: ${colors.mainColor};
     margin-top: 100px;
     padding: 0 2%;
 
@@ -36,7 +36,7 @@ export const SocialMediaIcons = styled.ul`
     }
 
     & li {
-        background-color: ${variables.mainColor};
+        background-color: ${colors.mainColor};
         width: 100px;
         height: 100px;
         margin-right: 16px;
@@ -90,7 +90,7 @@ export const SubscribeInput = styled.input`
 `
 
 export const SubscribeBtn = styled.button`
-    background-color: ${variables.secondColor};
+    background-color: ${colors.secondColor};
     color: #fff;
     font-size: 20px;
     padding: 20px 30px;
@@ -101,7 +101,7 @@ export const SubscribeBtn = styled.button`
     cursor: pointer;
 
     &:hover {
-        background-color: ${variables.infoBtnHover};
+        background-color: ${colors.infoBtnHover};
     }
 
     @media (max-width: 767px) {
