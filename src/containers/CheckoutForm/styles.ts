@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import variables from "../../styles/variables";
+import variables from "../../styles/colors";
 
 export const CartForm = styled.form`
     background-color: ${(props) => props.theme.mainColor};

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import companyBanner from '../../assets/images/company.webp'
-import variables from "../../styles/variables";
+import variables from "../../styles/colors";
 
 export const CompanyHero = styled.div`
     width: 100%;

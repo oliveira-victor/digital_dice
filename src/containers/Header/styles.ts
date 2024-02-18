@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 
-import variables from "../../styles/variables";
+import variables from "../../styles/colors";
 
 const bounce = keyframes`
     0%, 20%, 50%, 80%, 100% {transform: translate(8px, -8px);}

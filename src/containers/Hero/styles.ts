@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import heroImg from '../../assets/images/hero.webp'
-import variables from "../../styles/variables";
+import variables from "../../styles/colors";
 
 const FadeIn = keyframes`
     0% { opacity: 0; }

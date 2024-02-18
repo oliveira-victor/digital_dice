@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ContentWrapper } from "../../styles";
-import variables from "../../styles/variables";
+import variables from "../../styles/colors";
 import { removeItemBtn } from "../../components/GameCard/styles";
 
 export const Modal = styled.div`

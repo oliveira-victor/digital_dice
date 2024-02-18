@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-import variables from "../../styles/variables"
+import variables from "../../styles/colors"
 
 import { ContentWrapper, SectionTitle } from "../../styles"
 import * as S from './styles'
