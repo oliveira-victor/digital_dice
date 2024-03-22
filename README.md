@@ -32,7 +32,7 @@ https://github.com/oliveira-victor/digital_dice/assets/116602113/33a8d085-ae53-4
 
 2. Navigate to the project directory
    ```bash
-   cd project
+   cd digital_dice
 
 3. Install dependencies
    ```bash
